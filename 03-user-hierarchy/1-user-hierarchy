@@ -1,0 +1,11 @@
+# User hierarchy
+
+## The company may define their hierarchical structure, with their names.
+1. Level 0: Individual user
+1. Level 1: Team name (or other) name
+1. Level 2: Department (or other) name
+1. Level 3: Division (or other) name
+1. Level 4: Company (or other) name
+
+Up to 10
+ levels.  That should be enough.
