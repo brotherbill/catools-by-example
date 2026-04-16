@@ -1,21 +1,12 @@
-# Create Project
+# Exercise - Create Project Scaffolding
 
-## What is a Project?
-1. A project is all the assets needed to record, edit and publish a *single* video.
-    1. This includes Locked-downs restore points, one or more recordings (clips)
-    1. This may support captions and dubbing in many languages
-    1. This may include global intro or outro.
-    1. This may include a private sub-project to add in a missing part of a video.
-1. A Project is in a path, with a parent folder.
+When creating videos, there are many assets (files) that comprise the videos and enhancements.
+At the top, there is a parent folder that contains the folders and files for a single project.
 
-## Where does a project live?
-1. During creation, recording and editing, it lives in the local file system, with backups on Dropbox.
-1. After the project is "completed", for a while, it lives on Dropbox, with local file folders deleted.
-1. The parent folder of all projects in this course 
+As we are in the learning curve, we will do this manually, explaining each step.
 
 ## Parent folder
 1. The parent folder is the root of all of the video editing projects.
-    1. For the Learning Curve part of this course, we will have parent folder be C:\dev\catools-lc
 1. Each video editing projects has these top folders
     1. ACTIVE - Actively editing this video
         - This is the only folder used for editing.
@@ -32,6 +23,7 @@
         - Rehydrate from ROLLBACK_VAULT/ if needed.
         - ACTIVE/ must always reflect the current working state.
         - Treat this folder as volatile. It can break.
+
 
     2. ROLLBACK_VAULT - The safe versions locked down, so you can roll back to them after breaking the ACTIVE video.
         - Mission: Protect dehydrated states. Insurance for ACTIVE/.
