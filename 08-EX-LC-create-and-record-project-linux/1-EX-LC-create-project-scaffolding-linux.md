@@ -23,11 +23,11 @@ As we are in the learning curve, we will do this manually, explaining each step.
    ```
    ~/dev/catools-lc/
    ```
-2. **cd into it**:  
+1. **cd into it**:  
    ```
    cd ~/dev/catools-lc/
    ```
-3. **Create subfolders**:  
+1. **Create subfolders**:  
    ```
    ACTIVE/
    ROLLBACK_VAULT/
@@ -40,25 +40,21 @@ As we are in the learning curve, we will do this manually, explaining each step.
    ```
    cd ~/dev/catools-lc/ACTIVE
    ```
-2. **Create folder**:  
+1. **Create folder**:  
    ```
    AUDIATE/
    ```
-3. **Create folder**:  
-   ```
-   CAMTASIA/
-   ```
-4. **Create folder**:  
+1. **Create folder**:  
    ```
    ENHANCED_AUDIO/
    ```
-5. **Create folder**:  
-   ```
-   RAW/
-   ```
-6. **Create folder**:  
+1. **Create folder**:  
    ```
    OUT/
+   ```
+1. **Create folder**:  
+   ```
+   RAW/
    ```
 
 ---

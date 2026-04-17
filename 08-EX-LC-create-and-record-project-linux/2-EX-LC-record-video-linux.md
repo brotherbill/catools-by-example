@@ -1,125 +1,306 @@
-# Record video with Linux OBS Studio
+# Exercise – Record Video on Linux (OBS Studio)
+###### /caTools/LearningCurve/2-EX-LC-record-video-linux.md
 
-## Goals
+This exercise covers the **Linux‑only** portion of the workflow.  
+It ends after uploading the project ZIP to Dropbox and returning the Linux machine to a **stateless** condition.
+
+Windows dehydration is handled in a separate exercise.
+
+---
+
+# Important Note About Recording Format
+This workflow **currently supports `.mkv` as the required RAW recording format**.
+
+If the recording format changes in the future (e.g., `.mov`, `.webm`, `.mp4`),  
+**update the “Recording Format” section below — the filename of this MD file does not change.**
+
+The workflow remains the same; only the format line changes.
+
+---
+
+# Goals
 1. **Prepare for recording**  
-   - For those of you who watch Food Network, *mise en place* (“everything in its place”) applies here too.  
-   - Ensure OBS Studio is installed, the microphone is plugged into **this** recording computer, and the environment is ready.
-
 1. **Record the video**  
-   - Audio is captured automatically along with the screen recording.
-
-1. **Save recording assets**  
-   - Store them using standardized folders and standardized file names.
-
-1. **Transfer assets to Windows**  
-   - Windows performs dehydration, audio extraction, MP4 export, and all downstream processing.
-
-1. **Save to Dropbox**  
-   - This becomes the single source of truth for editing.
-
-1. **Tidy up the recording machine**  
-   - Return it to a clean, stateless condition so it’s ready for the next fresh recording.
+1. **Perform a VLC sanity check**  
+1. **Move assets into project scaffolding**  
+1. **Create a deterministic ZIP (GUI‑only)**  
+1. **Upload to Dropbox (browser only)**  
+1. **Return Linux to stateless**
 
 ---
 
-## Prepare for recording
-1. **Open OBS Studio**  
-   - OBS opens with your Scenes and Sources visible.  
-   - Ensure your “Screen Capture” and “Microphone” sources exist.
-
-1. **Verify your inputs**  
-   1. Confirm you are recording the **correct screen**.  
-   1. Confirm the **correct microphone** is selected.  
-   1. Decide whether to record **System Audio** (I do not).
-
-1. **Perform a microphone sanity check**  
-   1. **Speak** into your microphone.  
-   1. Watch the **Audio Mixer** → your mic meter must move.  
-   1. If it does not, **close and re‑open OBS Studio**.  
-   1. The microphone may be connected to another machine. *(This happens to me all the time.)*  
-   1. OBS will happily record video **with no audio**, and it will not warn you.  
-   1. This check prevents silent‑audio failures.
+# Remove COSMIC Media Player (one‑time)
+1. COSMIC Media Player starts muted and cannot be trusted for sanity checks.  
+   Remove it:
+   ```bash
+   sudo apt remove cosmic-media-player
+   ```
 
 ---
 
-## Record the video and audio
-1. **Start the recording**  
-   - Click **Start Recording** in OBS Studio.
+# Configure OBS Studio (one‑time setup, but verify every session)
 
-1. **Perform your Show and Tell** presentation.  
-   - OBS has **no countdown** — begin when ready.
+## **Output Settings (Critical for Windows Compatibility)**
 
-1. **Stop the recording**  
-   - Click **Stop Recording**.
+1. **Settings → Output → Output Mode**
+   ```
+   Advanced
+   ```
 
-1. OBS automatically saves the recording to your configured **Recording Path**.  
-   - Set this path ahead of time to:  
+1. **Settings → Output → Recording**
+   - **Type**
      ```
-     ~/junk/
+     Standard
+     ```
+   - **Recording Format**
+     ```
+     mkv
+     ```
+   - **Video Encoder**
+     ```
+     x264 (software)
+     ```
+     *Do NOT use VAAPI, NVENC, AMF, AV1, or any hardware encoder.*
+   - **Audio Encoder**
+     ```
+     AAC
+     ```
+   - **Rate Control**
+     ```
+     CBR
+     ```
+   - **Bitrate**
+     ```
+     20000
+     ```
+     *(You may increase to 30000 if needed.)*
+   - **Keyframe Interval**
+     ```
+     2
+     ```
+   - **CPU Usage Preset**
+     ```
+     veryfast
+     ```
+   - **Profile**
+     ```
+     high
      ```
 
-1. Your recording will appear as:  
+These settings guarantee:
+- **Constant Frame Rate (CFR)**  
+- **Camtasia‑compatible H.264**  
+- **No ragged edges, no blockiness, no jitter**  
+- **Perfect Windows decoding**
+
+---
+
+## **Video Settings**
+
+1. **Settings → Video**
+   - **Base (Canvas) Resolution**
+     ```
+     1920x1080
+     ```
+   - **Output (Scaled) Resolution**
+     ```
+     1920x1080
+     ```
+   - **Common FPS Values**
+     ```
+     30
+     ```
+
+This ensures:
+- No fractional framerates  
+- No scaling artifacts  
+- No decoding drift on Windows  
+
+---
+
+## **Audio Settings**
+
+1. **Settings → Audio**
+   - **Sample Rate**
+     ```
+     48 kHz
+     ```
+   - **Channels**
+     ```
+     Stereo
+     ```
+   - **Global Audio Devices**
+     - Disable everything except your microphone.
+
+---
+
+# Prepare for recording
+1. **Open OBS Studio**
+
+1. **Verify capture source**
+   - Must use **one**:
+     ```
+     Screen Capture (PipeWire)
+     ```
+   - Must point to the **exact monitor** you are using.
+
+1. **Verify microphone**
+   - Correct mic selected  
+   - System audio disabled
+
+1. **Microphone sanity check**
+   - Speak into mic  
+   - Meter must move
+
+---
+
+# Record the video and audio
+1. Click **Start Recording**  
+1. Perform your presentation  
+1. Click **Stop Recording**  
+1. OBS saves to:
+   ```
+   ~/junk/
+   ```
+1. **Rename**:
    ```
    lesson_01.mkv
    ```
-   *(OBS uses `.mkv` by default — this is correct and preferred.)*
-
-   1. No, this is **not** a typo — saving to `~/junk/` is correct.  
-      - This is a safe holding area for *suspected* or *unverified* content.
 
 ---
 
-## Move assets into project scaffolding
-1. **Cut**  
+# Playback sanity check (Linux)
+1. Right‑click:
    ```
    ~/junk/lesson_01.mkv
    ```
-   then **paste** it into:  
+1. Open With → **VLC Media Player**
+
+Confirm:
+- Video exists  
+- Audio exists  
+- Mic correct  
+- Screen correct  
+- No corruption  
+
+If audio is missing → re‑record.
+
+---
+
+# Move assets into project scaffolding
+
+### **Ensure full project scaffolding exists**
+Linux must create the **same folder structure** that Windows expects.
+
+Create (or verify) the following folders:
+
+```
+~/dev/catools-lc/ACTIVE/RAW/
+~/dev/catools-lc/ACTIVE/CAMTASIA/
+~/dev/catools-lc/ACTIVE/AUDIATE/
+~/dev/catools-lc/ACTIVE/OUT/
+```
+
+> Even though Linux never uses CAMTASIA,  
+> **it must exist** so the Windows workflow is deterministic.
+
+### **Move the RAW MKV**
+1. **Cut**:
+   ```
+   ~/junk/lesson_01.mkv
+   ```
+1. **Paste** into:
    ```
    ~/dev/catools-lc/ACTIVE/RAW/
    ```
 
-1. Confirm the folder now contains:  
-   - `lesson_01.mkv`
+---
+
+# Create ZIP for Dropbox (GUI‑only, deterministic)
+
+> **Critical doctrine:**  
+> The ZIP must contain **exactly one top‑level folder named `catools-lc`**.  
+> No nested `catools-lc/catools-lc/`.  
+> No missing folder.  
+> No extra levels.
+
+### **Correct zipping procedure**
+1. Open **Files**  
+1. Navigate to:
+   ```
+   ~/dev/
+   ```
+1. **Right‑click the folder**:
+   ```
+   catools-lc
+   ```
+   *(Do NOT enter the folder before compressing it.)*
+1. Choose:
+   ```
+   Compress…
+   ```
+1. Set **File name** to:
+   ```
+   catools-lc
+   ```
+   *(Do NOT type “.zip” — the system adds it.)*
+
+This guarantees the ZIP root is:
+
+```
+catools-lc/
+    ACTIVE/
+        RAW/
+        CAMTASIA/
+        AUDIATE/
+        OUT/
+```
 
 ---
 
-## Transfer to Windows for dehydration
-1. **Copy**  
-   ```
-   ~/dev/catools-lc/
-   ```
-   to your Windows machine using your preferred method:  
-   - Dropbox  
-   - USB drive  
-   - Network share  
-   - WSL shared folder  
-   - SCP (advanced users)
+# Upload to Dropbox (Linux side only)
 
-1. On Windows, continue with the **Windows Dehydration Workflow**.
+Linux uses **Dropbox in the browser**.  
+No filesystem‑mounted Dropbox.  
+No terminal uploads.
+
+### Steps
+1. Open browser → https://www.dropbox.com  
+1. **Construct the full Dropbox path if missing**:
+   ```
+   /caTools/LearningCurve/lesson_01/
+   ```
+   - Create `caTools` if missing  
+   - Create `LearningCurve` if missing  
+   - Create `lesson_01` if missing  
+
+1. Enter:
+   ```
+   /caTools/LearningCurve/lesson_01/
+   ```
+
+1. **Drag‑and‑drop upload**  
+   Drag:
+   ```
+   ~/dev/catools-lc.zip
+   ```
+   into the Dropbox window **while inside the correct folder**.
 
 ---
 
-## Tidy up the Linux recording machine
-1. **Delete all contents of**:  
+# Tidy up the Linux recording machine
+1. Delete contents of:
    ```
    ~/junk/
    ```
-   *(This folder must be empty before the next recording.)*
-
-1. **Delete all contents of**:  
+1. Delete contents of:
    ```
    ~/dev/catools-lc/
    ```
-   *(Linux machine must remain stateless.)*
-
-1. You are now ready for the **next fresh recording**.
+1. Linux machine returns to **stateless**.
 
 ---
 
-## Summary
-1. Linux uses **OBS Studio**, not Camtasia Recorder.  
-1. Linux produces **.mkv**, not `.trec`.  
-1. Linux does **zero** dehydration — Windows does all heavy lifting.  
-1. Linux must remain **stateless**, just like the Windows recording machine.  
-1. This workflow ensures cross‑platform consistency and prevents silent failures.  
+# End of Linux Exercise
+This completes the Linux‑only workflow.  
+The next exercise begins on Windows and handles dehydration and downstream processing.
