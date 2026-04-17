@@ -1,84 +1,263 @@
 # Record video with Windows Camtasia Recorder
-> This is the same whether the Camtasia Recorder is on this Windows machine or another Windows machine.
+> This process is identical whether the Camtasia Recorder is on this Windows machine or a different Windows machine.
 
-1. **Open Camtasia Recorder**.  
-    1. It opens with title **Camtasia Editor Recorder**.
-    1. Ignore the *Editor* part.  (*The Camtasia Editor Recorder doesn't have Editing capabilities*)
-1. Ensure that you are recording the **correct screen**, and **correct microphone** and whether you want **System Audio** (*I don't*)
-1. **Speak** into your microphone.  If you don't see your voice light up under the Microphone card, close and re-open Camtasia Recorder.  
-    1. The microphone may be connected to another computer.  (*This happens to me all the time*)
-    1. Camtasia will gladly record your video without a connected and working microphone.
-    1. There are many times that I recorded a video and on play back, there was no sound
+## Goals
+1. **Prepare for recording**  
+   - For those of you who watch Food Network, *mise en place* (“everything in its place”) applies here too.  
+   - Ensure all tools are installed, the microphone is plugged into **this** recording computer, and the environment is ready.
 
-1. Start the recording.  **Click** the big red **rec** button 
-1. **Wait** for the three second countdown, then do your Show and Tell presentation.
-1. **Click** the **Stop** button.
-1. **Save Recording** to **C:\junk\ ** (*Create it if it doesn't exist*), with filename: lesson_01.trec, and click Save button.
-    1. This will open up Camtasia Rev app.
-    1. Click the **Open in Editor** button, which opens up Camtasia Editor - Untitled Project.
-        1. **STOP**.  Do not Save or start editing.  Take your hands off the keyboard and off the mouse, and nobody gets hurt.
+1. **Record the video**  
+   - Audio is captured automatically along with the screen recording.
 
-1. **File > Export > Zipped Project...**
-    1. **Change folder path** to **C:\junk\ **  (*Don't click Save button*)
-    1. **Change filename** to **lesson_01_RAW.zip**  
-    1. **Click** **Save** button
-1. **File > Exit** (*to close Camtasia Editor*)
-    1. Dialog box asks: **Save changes to the project file Untitled Project.tscproj?**
-    1. **Click** the **No** button.
-        1. Fight the urge to save the changes.  **No** is the only correct choice.
-1. Camtasia Editor closes.  **C:\junk\** has **lesson_01.trec** and **lesson_01_RAW.zip** files.
-1. Cut **C:\junk\lesson_01_RAW.**zip, then paste to **C:\dev\catools-lc\ACTIVE\RAW\**
-1. **Expand C:\dev\catools-lc\ACTIVE\RAW\ ** to the same target folder of **C:\dev\catools-lc\ACTIVE\RAW\ **
-     1. On my machine this results in these 4 files in C:\dev\catools-lc\ACTIVE\RAW
-         1. ACTIVE/RAW/dots.tscshadervid (*harmless file, leave it alone*)
-         1. ACTIVE/RAW/lesson_01.trec (*Techsmith RECording.  Contains the recorded audio and video*)
-         1. ACTIVE/RAW/lesson_01_RAW.tscproj (*harmless file, leave it alone*)
-         1. ACTIVE/RAW/lesson_01_RAW.zip (*dehydrated files containing other extracted files*)
+1. **Save recording assets**  
+   - Store them in a universal Camtasia format using standardized folders and standardized file names.
 
-1. **Open Windows Camtasia**, then STOP.  (*If it wants to install an update, allow that*)
-1. **Click** New Project**, then STOP.  (*This brings up Camtasia Editor - Untitled Project*)
-1. **Drag** **C:\dev\catools-lc\ACTIVE\RAW\lesson_01.trec** to Camtasia Editor | Media Bin
-1. **Right-click** on **lesson_01.trec** from Media Bin, then choose: **Add to Timeline at Playhead**.
-1. **Right-click** on **lesson_01.trec** on **Track 1**, then choose: **Separate Audio and Video**.
-1. **Rename Track 1** to **Video**
-1. **Rename Track 2** to **Audio**
+1. **Dehydrate assets**  
+   - Produce a clean, portable ZIP snapshot.
+
+1. **Save to Dropbox**  
+   - This becomes the single source of truth for editing.
+
+1. **Tidy up the recording machine**  
+   - Return it to a clean, stateless condition so it’s ready for the next fresh recording.
+
+### Prepare for recording
+1. **Open Camtasia Recorder**  
+   1. It opens with the title **Camtasia Editor Recorder**.  
+   1. Ignore the *Editor* part — the Recorder has **no editing capabilities**.
+
+1. **Verify your inputs**  
+   1. Confirm you are recording the **correct screen**.  
+   1. Confirm the **correct microphone** is selected.  
+   1. Decide whether to record **System Audio** (I do not).
+
+1. **Perform a microphone sanity check**  
+   1. **Speak** into your microphone. If you don’t see your voice meter light up under the Microphone card, **close and re‑open Camtasia Recorder**.  
+   1. The microphone may be connected to another computer. *(This happens to me all the time.)*  
+   1. Camtasia will happily record video **with no audio**, and it will not warn you.  
+   1. I have recorded many videos where playback revealed **no sound at all** — this check prevents that failure.
+
+### Record the video and audio
+1. **Start the recording**  
+   - Click the big red **REC** button.
+
+1. **Wait for the 3‑second countdown**, then perform your **Show and Tell** presentation.
+
+1. **Stop the recording**  
+   - Click the **Stop** button.
+
+1. **Save Recording** to:  
+   ```
+   C:\junk\
+   ```
+   with filename:  
+   ```
+   lesson_01.trec
+   ```
+   *(Create C:\junk\ if it doesn’t exist.)*
+
+   1. No, this is **not** a typo — saving to `C:\junk\` is correct.  
+      - This is a safe holding area for *suspected* or *unverified* content.
+
+   1. Saving will automatically open the **Camtasia Rev** app.
+
+   1. Click **Open in Editor**, which launches **Camtasia Editor – Untitled Project**.
+
+      1. **STOP.** Do **not** save. Do **not** edit.  
+         Take your hands off the keyboard and mouse.
+
+      1. **Breathe.**  
+         This is a transition point — the project is *not* to be touched on the recording machine.
+   
+### Save Camtasia internal assets
+1. **File > Export > Zipped Project...**  
+   1. **Change the folder path** to:  
+      ```
+      C:\junk\
+      ```
+      *(Do not click Save yet.)*  
+   1. **Change the filename** to:  
+      ```
+      lesson_01_RAW.zip
+      ```
+   1. **Click** the **Save** button.
+
+1. **File > Exit**  
+   - This closes Camtasia Editor.
+
+   1. When the dialog appears:  
+      **“Save changes to the project file Untitled Project.tscproj?”**  
+      **Click** **No**.  
+      1. Fight the urge to save. **No** is the only correct choice.
+
+1. Camtasia Editor closes.  
+   - The folder `C:\junk\` now contains:  
+     - `lesson_01.trec`  
+     - `lesson_01_RAW.zip`
+
+### Expand zip file and save assets in folders
+1. **Cut**  
+   ```
+   C:\junk\lesson_01_RAW.zip
+   ```
+   then **paste** it into:  
+   ```
+   C:\dev\catools-lc\ACTIVE\RAW\
+   ```
+
+1. **Expand** the ZIP file **in the same target folder**:  
+   ```
+   C:\dev\catools-lc\ACTIVE\RAW\
+   ```
+   1. On my machine, this results in these four files in `ACTIVE\RAW\`:
+      1. `dots.tscshadervid` — harmless file, leave it alone.  
+      1. `lesson_01.trec` — TechSmith recording containing the raw audio + video.  
+      1. `lesson_01_RAW.tscproj` — harmless file, leave it alone.  
+      1. `lesson_01_RAW.zip` — dehydrated bundle containing extracted assets.
+
+1. **Open Windows Camtasia**, then **STOP**.  
+   *(If it wants to install an update, allow it.)*
+
+1. **Click New Project**, then **STOP**.  
+   *(This brings up “Camtasia Editor – Untitled Project.”)*
+
+1. **Drag**  
+   ```
+   C:\dev\catools-lc\ACTIVE\RAW\lesson_01.trec
+   ```
+   into the Camtasia Editor → **Media Bin**.
+
+1. **Right‑click** `lesson_01.trec` in the Media Bin → **Add to Timeline at Playhead**.
+
+1. **Right‑click** `lesson_01.trec` on **Track 1** → **Separate Audio and Video**.
+
+1. **Rename Track 1** to **Video**  
+   1. **Double‑click** the track name → type **Video**.
+
+1. **Rename Track 2** to **Audio**  
+   1. **Double‑click** the track name → type **Audio**.
 
 ### Export audio track to ACTIVE\RAW
-1. **Export > Export Audio Only...**.  In "Save Audio Dialog", 
-    1. **Folder Path** is: **C:\dev\catools-lc\ACTIVE\RAW\ **
-    1. **File name** is: **lesson_01_RAW.wav**
-    1. **Click Save** button
+1. **Export > Export Audio Only...**  
+   In the “Save Audio” dialog:
+
+   1. **Folder path**:  
+      ```
+      C:\dev\catools-lc\ACTIVE\RAW\
+      ```
+
+   1. **File name**:  
+      ```
+      lesson_01_RAW.wav
+      ```
+
+   1. **Click** the **Save** button.
 
 ### Export video as MP4 (*in Camtasia*)
 1. **Export > Local File...**
-    1. **File name**: **lesson_01_VIDEO.mp4**
-    1. **File Type**: **MP4 (*Recommended*)**
-    1. **Save Location**: **C:\dev\catools-lc\ACTIVE\RAW\ **
-    1. **Click: Export** button
-    1. **Exporter dialog** comes up.  
-        1. **Click: Open File Location** button
-            1. Confirm that **path** is: **C:\dev\catools-lc\ACTIVE\RAW**
-            1. Confirm that file with **filename**: **lesson_01_VIDEO.mp4** exists there.
-    1. Play mp4 video (*at least 5 - 10 seconds*) for sanity check that video and audio look and sound right.
+
+   1. **File name**:  
+      ```
+      lesson_01_VIDEO.mp4
+      ```
+
+   1. **File Type**:  
+      ```
+      MP4 (Recommended)
+      ```
+
+   1. **Save Location**:  
+      ```
+      C:\dev\catools-lc\ACTIVE\RAW\
+      ```
+
+   1. **Click** the **Export** button.
+
+   1. When the **Exporter dialog** appears:  
+      1. **Click: Open File Location**  
+         - Confirm the **path** is:  
+           ```
+           C:\dev\catools-lc\ACTIVE\RAW\
+           ```
+         - Confirm the file **lesson_01_VIDEO.mp4** exists there.
+
+   1. **Play the MP4 video** — at least **5–10 seconds** — to perform a mandatory sanity check.  
+      - You must **see video**.  
+      - You must **hear audio**.  
+      - This is the moment to catch recording failures (wrong mic, no mic, wrong screen, corrupted export).
 
 ### Close Windows Camtasia
-1. In Camtasia, **File > Exit**
-1. When prompted to: ** Save changes to the project file Untitled Project.tscproj**, click the **No** button.
-    1. Resist the urge to save changes in Windows Camtasia.
-    1. Windows Camtasia closes quietly.
+1. In Camtasia, **File > Exit**.
+
+1. When prompted:  
+   **“Save changes to the project file Untitled Project.tscproj?”**  
+   **Click the No button.**
+
+   1. **Resist the urge** to save changes in Windows Camtasia.  
+      - This goes against all your training to *Save Early, Save Often*.  
+      - But here, **saving is contamination**.
+
+   1. Windows Camtasia closes quietly.
 
 ### Zip and save to Dropbox
-1. Zip all files in C:\dev\caTools-lc\ to C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip
-2. Drag C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip to Dropbox location caTools/LearningCurve/lesson_01/catools-lc_lesson_01_2026-04-17T071916.zip
+1. **Zip all files** in:
+   ```
+   C:\dev\catools-lc\
+   ```
+   into a single ZIP file named something like:
+   ```
+   catools-lc_lesson_01_YYYY-MM-DDTHHMMSS.zip
+   ```
 
-### Backup C:\dev\caTools-lc\ to C:\junk
-1. Ensure C:\junk\ doesn't contain caTools-lc.
-1. This is a good time to delete contents of C:\junk\
-1. Copy C:\dev\caTools-lc\ to C:\junk
+   - **Use your own current timestamp.**  
+   - **The timestamp must be in Greenwich Mean Time (GMT), not your local time.**  
+   - **The “T” in the middle is a literal character.**  
+     - It separates the date from the time.  
+     - It is not a variable, not a placeholder, and not optional.  
+     - Example format:  
+       ```
+       2026-04-17T071916
+       ```
+       This example reflects the exact GMT moment *I* performed the action.  
+       Your timestamp will be different every time.
 
-### Delete contents of C:\dev\caTools-lc\
-1. Delete contents of C:\dev\caTools-lc\
-    1. Now you are ready for next recording.
+1. **Drag your ZIP file** into your Dropbox location:
+   ```
+   caTools/LearningCurve/lesson_01/
+   ```
+   so it becomes:
+   ```
+   caTools/LearningCurve/lesson_01/catools-lc_lesson_01_YYYY-MM-DDTHHMMSS.zip
+   ```
+
+### Backup C:\dev\catools-lc\ to C:\junk
+1. This is a cheap, fast way to maintain **multiple backups**.
+
+1. This is a good time to **delete the contents of**:
+   ```
+   C:\junk\
+   ```
+   *(You want this folder empty before placing a fresh backup.)*
+
+1. **Copy**  
+   ```
+   C:\dev\catools-lc\
+   ```
+   to:
+   ```
+   C:\junk\
+   ```
+   This gives you a second, local, disposable backup of the entire project state.
+
+### Delete contents of C:\dev\catools-lc\
+1. **Delete all contents of**:
+   ```
+   C:\dev\catools-lc\
+   ```
+   This returns the recording machine to a **clean, stateless** condition.
+
+   1. Now you are ready for the **next fresh recording**.
+
 
 ### Summary
 1. For the 99.9% of you that have used Windows Camtasia Recorder before, you have noticed a different flow.
@@ -100,3 +279,43 @@
         1. The astronauts were concerned that any toggle switch could fail under these harsh and untested conditions.
         1. It would take only a single failure of a single toggle switch to doom the return mission.
         1. Every toggle switch did its job and the astronauts returned safely to Earth.
+
+
+### Summary
+1. For the 99.9% of you who have used Windows Camtasia Recorder before, you have noticed that this workflow is **very** different.
+
+1. Am I mad, or paranoid, or just doing best‑can‑do?
+
+   1. I am not mad, nor even angry.
+
+   1. As Andy Grove wrote: **“Only the paranoid survive.”**  
+      *(He was a Holocaust survivor.)*
+
+   1. Yes, I am paranoid.  
+      1. Computers do exactly what they are told — not what you *meant*.  
+      1. When **Audiate synchronizes with Camtasia**, but **Camtasia does not synchronize back with Audiate**, that is an accident waiting to happen.  
+      1. When your microphone is plugged into a different machine, your audio will be **100% silent**.
+
+   1. This workflow is the **best‑can‑do**.  
+      1. Standard folder names.  
+      1. Standard file names.  
+      1. Saving to Dropbox.  
+      1. Stateless recording machine.  
+      1. Deterministic, repeatable, operator‑grade steps.
+
+   1. During the Mercury, Gemini, and Apollo NASA missions — each mission was, by definition, **experimental** — yet every mission launched and returned safely to Earth.  
+      The exception was **Apollo 1**, where three astronauts died in a cabin fire during a ground test in a 100% oxygen environment, with a hatch that could not be opened in an emergency.
+
+      1. There is a joke that when Neil Armstrong landed on the Moon, NASA informed him that every part of the spacecraft was made by the **lowest bidder**.  
+      1. In reality, every vendor ensured that every part they shipped was the **best** that current technology could produce. There was pride in workmanship.
+
+   1. For Apollo 11, there had never been a requirement that the command module be powered down during flight and then re‑powered for the return — where the module would be literally frozen.  
+      1. The astronauts were concerned that any toggle switch could fail under these harsh, untested conditions.  
+      1. A single failed switch could doom the return mission.  
+      1. Every toggle switch worked. The astronauts returned safely to Earth.
+
+In the end, this workflow is our version of NASA’s toggle‑switch discipline.
+
+Every step, every folder name, every filename, every STOP point exists to prevent silent failures and to guarantee that each mission — each recording — returns safely. We are not chasing elegance. We are chasing **survivability**. When the tools behave unpredictably, when synchronization is asymmetric, when microphones wander off to other machines, paranoia is not a flaw — it is the only responsible posture. 
+
+This process ensures that no matter how chaotic the environment becomes, the operator brings every recording home.
