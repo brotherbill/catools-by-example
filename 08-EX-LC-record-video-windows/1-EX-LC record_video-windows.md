@@ -60,3 +60,12 @@
             1. Confirm that **path** is: **C:\dev\catools-lc\ACTIVE\RAW**
             1. Confirm that file with **filename**: **lesson_01_VIDEO.mp4** exists there.
 
+### Close Windows Camtasia
+1. In Camtasia, **File > Exit**
+1. When prompted to: ** Save changes to the project file Untitled Project.tscproj, click the **No** button.
+    1. Resist the urge to save changes in Windows Camtasia.
+    1. Windows Camtasia closes quietly.
+
+### Zip and save to Dropbox
+1. Zip all files in C:\dev\caTools-lc\ to C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip
+2. Drag C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip to Dropbox location caTools/LearningCurve/lesson_01/catools-lc_lesson_01_2026-04-17T071916.zip
