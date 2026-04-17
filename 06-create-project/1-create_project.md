@@ -16,8 +16,15 @@
 ## Parent folder
 1. The parent folder is the root of all of the video editing projects.
     1. For the Learning Curve part of this course, we will have parent folder be C:\dev\catools-lc
+        1. catools means Camtasia + Audiate + caTools
+        2. lc means learning curve
+    - Parent folder for learning curve.
+    - Mirrors caTools workflow manually.
+    - Not used for production nor automation.
+    - Training ground for operator discipline.
+
 1. Each video editing projects has these top folders
-    1. ACTIVE - Actively editing this video
+    1. **ACTIVE** - Actively editing this video
         - This is the only folder used for editing.
         - Camtasia and Audiate read and write here.
         - All editing happens inside ACTIVE/.
@@ -32,8 +39,29 @@
         - Rehydrate from ROLLBACK_VAULT/ if needed.
         - ACTIVE/ must always reflect the current working state.
         - Treat this folder as volatile. It can break.
+        1. Subfolders are: 
+            1. RAW
+                - Holds original camera, microphone and screen recordings.
+                - Source of truth for the lesson.
+                - Never edited, renamed, modified or deleted.
+            2. ENHANCED_AUDIO
+                - Holds cleaned and improved audio.
+                - Vendor-agnostic enhancement workspace.
+                - Only processed audio lives here.            
+            3. AUDIATE
+                - Holds Audiate project files and transcripts.
+                - Used for alignment and text edits only.
+                - Audiate reads and writes here.                
+            4. CAMTASIA
+                - Holds Camtasia project files and timeline assets.
+                - Camtasia reads and writes here.
+                - Active editing workspace.
+            5. OUT
+                - Holds final rendered outputs.
+                - Only completed lesson assets go here.
+                - Must stay clean for automation.
 
-    2. ROLLBACK_VAULT - The safe versions locked down, so you can roll back to them after breaking the ACTIVE video.
+    2. **ROLLBACK_VAULT** - The safe versions locked down, so you can roll back to them after breaking the **ACTIVE** video.
         - Mission: Protect dehydrated states. Insurance for ACTIVE/.
         - Do not edit, rename, or delete anything.
         - Do not open vault files in Camtasia or Audiate.
