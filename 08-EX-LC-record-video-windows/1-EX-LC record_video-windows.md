@@ -59,13 +59,44 @@
         1. **Click: Open File Location** button
             1. Confirm that **path** is: **C:\dev\catools-lc\ACTIVE\RAW**
             1. Confirm that file with **filename**: **lesson_01_VIDEO.mp4** exists there.
+    1. Play mp4 video (*at least 5 - 10 seconds*) for sanity check that video and audio look and sound right.
 
 ### Close Windows Camtasia
 1. In Camtasia, **File > Exit**
-1. When prompted to: ** Save changes to the project file Untitled Project.tscproj, click the **No** button.
+1. When prompted to: ** Save changes to the project file Untitled Project.tscproj**, click the **No** button.
     1. Resist the urge to save changes in Windows Camtasia.
     1. Windows Camtasia closes quietly.
 
 ### Zip and save to Dropbox
 1. Zip all files in C:\dev\caTools-lc\ to C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip
 2. Drag C:\dev\caTools-lc\catools-lc_lesson_01_2026-04-17T071916.zip to Dropbox location caTools/LearningCurve/lesson_01/catools-lc_lesson_01_2026-04-17T071916.zip
+
+### Backup C:\dev\caTools-lc\ to C:\junk
+1. Ensure C:\junk\ doesn't contain caTools-lc.
+1. This is a good time to delete contents of C:\junk\
+1. Copy C:\dev\caTools-lc\ to C:\junk
+
+### Delete contents of C:\dev\caTools-lc\
+1. Delete contents of C:\dev\caTools-lc\
+    1. Now you are ready for next recording.
+
+### Summary
+1. For the 99.9% of you that have used Windows Camtasia Recorder before, you have noticed a different flow.
+1. Am I mad, or paranoid, or just doing best-can-do?
+    1. I am not mad, nor even angry.
+    1. As Andy Grove wrote: "Only the paranoid survive".  (*He is a Holocaust surviver*)
+    1. Yes, I am paranoid.  
+        1. Computers do what they are told.  
+        1. When Audiate synchronizes with Camtasia, but Camtasia doesn't synchronize with Audiate, that is an accident waiting to happen.
+        1. When your microphone is plugged into a different machine, your audio will be 100% silent.
+    1. This is the best can do.
+        1. Standard folder names.
+        1. Standard file names.
+        1. Saving to Dropbox.
+    1. During the Mercury, Gemini and Apollo NASA missions, where each mission was by definition **experimental**, every mission took off and returned safely to Earth.  The Apollo 1 mission ended with three deaths due to an on-board fire in 100% Oxygen environment during a training exercise, where the hatch could not be opened in an emergency.
+        1. There is a joke that when Neil Armstrong landed on the Moon, NASA informed him that every single part in the mission was made by the lowest bidder.
+        1. In fact, each vendor made sure that every part they shipped was the **best** that current technology could produce.  There was pride in workmanship.
+    1. For Apollo 11, there had never been a requirement that the command module be powered down during flight and re-powered on for the return, where the command module would be literally frozen.
+        1. The astronauts were concerned that any toggle switch could fail under these harsh and untested conditions.
+        1. It would take only a single failure of a single toggle switch to doom the return mission.
+        1. Every toggle switch did its job and the astronauts returned safely to Earth.
