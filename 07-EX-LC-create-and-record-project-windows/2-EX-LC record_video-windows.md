@@ -1,4 +1,5 @@
-# Record video with Linux Camtasia Recorder
+# Record video with Windows Camtasia Recorder
+> This process is identical whether the Camtasia Recorder is on this Windows machine or a different Windows machine.
 
 ## Goals
 1. **Prepare for recording**  
@@ -21,7 +22,7 @@
    - Return it to a clean, stateless condition so it’s ready for the next fresh recording.
 
 ### Prepare for recording
-1. **Open OBS Studio**  
+1. **Open Camtasia Recorder**  
    1. It opens with the title **Camtasia Editor Recorder**.  
    1. Ignore the *Editor* part — the Recorder has **no editing capabilities**.
 
@@ -53,7 +54,6 @@
    ```
    lesson_01.trec
    ```
-   *(Create C:\junk\ if it doesn’t exist.)*
 
    1. No, this is **not** a typo — saving to `C:\junk\` is correct.  
       - This is a safe holding area for *suspected* or *unverified* content.
