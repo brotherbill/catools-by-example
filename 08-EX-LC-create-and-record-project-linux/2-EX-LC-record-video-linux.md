@@ -1,4 +1,5 @@
-# /caTools/LearningCurve/2-EX-LC-record-video-linux.md
+# Exercise – Record Video on Linux
+###### /caTools/LearningCurve/08-EX-LC-create-and-record-project-linux/2-EX-LC-record-video-linux.md
 
 This exercise covers the **Linux‑only** portion of the workflow.  
 It ends after uploading the **project ZIP** (containing all project folders and files, including the remuxed `.mp4`) to Dropbox and returning the Linux machine to a **stateless** condition.
@@ -8,9 +9,17 @@ Windows dehydration is handled in a separate exercise.
 ---
 
 # Important Note About Recording Format
-Linux records in **`.mkv`** because MKV is crash‑proof and safe.
+Linux records in:
+```
+.mkv
+```
+because MKV is crash‑proof and safe.
 
-Immediately after recording, Linux performs a **lossless remux** to **`.mp4`** using OBS Studio.
+Immediately after recording, Linux performs a **lossless remux** to:
+```
+.mp4
+```
+using OBS Studio.
 
 Windows receives the **ZIP**, which contains the entire `catools-lc` folder, including the `.mp4`.
 
@@ -27,7 +36,7 @@ update the “Recording Format” section inside this file — the filename does
 1. Remux MKV → MP4 (lossless)  
 1. Create deterministic ZIP (GUI‑only)  
 1. Upload ZIP to Dropbox (browser only)  
-1. Return Linux to stateless
+1. Return Linux to stateless  
 
 ---
 
@@ -127,9 +136,9 @@ update the “Recording Format” section inside this file — the filename does
 ---
 
 # Record the video
-1. **Click** **Start Recording**.  
-1. **Perform** the presentation.  
-1. **Click** **Stop Recording**.  
+1. Click **Start Recording**.  
+1. Perform the presentation.  
+1. Click **Stop Recording**.  
 1. OBS saves to:
    ```
    ~/junk/
@@ -214,12 +223,11 @@ The ZIP must contain **exactly one top‑level folder named `catools-lc`**.
      *(Do NOT type `.zip` — the system adds it.)*
    - Password: leave blank  
    - Click **Create**
+
 1. This produces:
    ```
    ~/dev/catools-lc.zip
    ```
-
-This ZIP contains the entire project structure at the correct level.
 
 ---
 
@@ -228,22 +236,22 @@ Linux must use **browser‑only** Dropbox.
 
 1. Open browser → https://www.dropbox.com  
 
-1. In Dropbox, you must **build the full nested folder path**:
+1. Build the full nested folder path:
 
-   - Ensure the top‑level folder exists:
+   - Ensure:
      ```
      /caTools/
      ```
-   - Inside `/caTools/`, create (if missing):
+   - Inside it:
      ```
      LearningCurve
      ```
-   - Inside `/caTools/LearningCurve/`, create (if missing):
+   - Inside it:
      ```
      lesson_01
      ```
 
-1. After the nested structure exists, **enter**:
+1. Enter:
    ```
    /caTools/LearningCurve/lesson_01/
    ```

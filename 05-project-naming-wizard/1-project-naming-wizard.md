@@ -1,29 +1,63 @@
-# Project naming wizard
+# Project Naming Wizard
+###### /caTools/LearningCurve/05-project-naming-wizard/1-project-naming-wizard.md
 
-1. The customers may have one or more ways to name projects.
-    1. A simple way would be lesson_01, lesson_02, etc.
-    1. A fancier way would be c04_2c_p32_fun_with_strings, where this is for chapter 4, second section, third part, starting on page 32, with lesson "fun with strings".
-1. Each Project Naming rule has versions, with the projects staying with their original versions, and automatically have names modernized to the current version.
-1. Once a naming wizard is created and projects are built with it, it is locked down for that version, and and changes require a new version.
-    1. Although there are safe changes that can be applied in a version, it is best to make changes to the next version, where it is obvious that changes were made.
-1. There may be many ways to name projects.  In general, it is expected that there should only be a handful of ways to name projects.  If you have 50 ways of naming projects, that is likely not taking advantage of the power that the wizard has.
+## Project naming wizard
+1. Customers may have one or more ways to name projects.
+1. A simple naming pattern might be:
+   ```
+   lesson_01, lesson_02, lesson_03
+   ```
+1. A more expressive pattern might be:
+   ```
+   c04_2c_p32_fun_with_strings
+   ```
+   - Chapter 4  
+   - Second section  
+   - Third part  
+   - Starting on page 32  
+   - Lesson title: “fun with strings”
+
+1. Each Project Naming Rule has **versions**.  
+   - Projects stay with their original version.  
+   - Names may be automatically modernized to the current version.  
+
+1. Once a naming wizard is created and projects are built with it, that version is **locked down**.  
+   - Changes require a **new version**.  
+   - Safe changes may exist, but it is best to apply them to the next version so the change is explicit.
+
+1. There may be many ways to name projects, but in practice there should be only a handful.  
+   - If you have 50 naming patterns, you are not leveraging the power of the wizard.
+
+---
 
 ## Architecture of project names
-1. A project name is a sequence of segments.
-1. There may be no ambiguity of parsing segments.
+1. A project name is a **sequence of segments**.
+1. There must be **no ambiguity** when parsing segments.
 1. A segment may be one of:
-    1. literal (constant) text 
-        1. "lesson" or "c" or "p"
-    2. choice of several literal (constant) text
-    3. separator
-        1. period or dash or underbar (only one)
-    4. Number
-        1. Min, Max
-        1. Decimal or Hexadecimal
-    5. Free text
-        1. Min length 
-        1. Max length
-        1. Choice of letters, digits, punctuation
-        1. Rules for lowercase, uppercase
 
-## For hands-on version, we will manually name files, using lesson_01 format.        
+   1. **Literal text**  
+      - Examples: `"lesson"`, `"c"`, `"p"`
+
+   1. **Choice of literal text**  
+      - A fixed set of allowed constants
+
+   1. **Separator**  
+      - One of: period (`.`), dash (`-`), underbar (`_`)
+
+   1. **Number**  
+      - Min / Max  
+      - Decimal or Hexadecimal
+
+   1. **Free text**  
+      - Min length  
+      - Max length  
+      - Allowed characters (letters, digits, punctuation)  
+      - Rules for lowercase / uppercase
+
+---
+
+## Hands‑on version
+1. For the learning curve, we will manually name files using the simple format:
+   ```
+   lesson_01
+   ```

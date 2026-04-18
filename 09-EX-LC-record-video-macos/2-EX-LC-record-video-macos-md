@@ -1,0 +1,224 @@
+# Exercise – Record Video on macOS (Camtasia Recorder Only)
+###### /caTools/LearningCurve/09-EX-LC-record-video-macos/2-EX-LC-record-video-macos.md
+
+This exercise covers the **macOS‑only** portion of the workflow.  
+The Mac is used **only** as a recording device using **Camtasia Recorder**.  
+No editing is performed on macOS.  
+No `.tscproj` files are created or saved.
+
+All dehydration and editing occur on Windows.
+
+---
+
+# Goals
+1. Prepare the Mac for recording  
+1. Launch Camtasia **Recorder Only**  
+1. Record the lesson  
+1. Perform VLC sanity checks  
+1. Create the project ZIP (Mac‑exact doctrine)  
+1. Upload ZIP to Dropbox (browser only)  
+1. Return macOS to a stateless condition  
+
+---
+
+# Prepare the Mac for Recording
+
+1. **Close all unnecessary applications**  
+   - Only the recording target (browser, terminal, IDE, etc.) should remain open.  
+   - This prevents visual noise and reduces CPU load.
+
+1. **Ensure external monitor is connected (if used)**  
+   - Camtasia Recorder must capture the **exact monitor** you intend to record.
+
+1. **Verify audio input**  
+   - Use the macOS menu bar → Sound icon  
+   - Confirm the correct microphone is selected  
+   - Confirm input levels are active when speaking
+
+---
+
+# Launch Camtasia Recorder (Mac)
+
+1. Open **Camtasia** from Applications.  
+1. In the top menu bar, click:
+   ```
+   Camtasia → Preferences…
+   ```
+1. Select the **Recording** tab.  
+1. Ensure:
+   - **Record Screen** is enabled  
+   - **Record Microphone** is enabled  
+   - **Record System Audio** is disabled (unless explicitly required)  
+
+1. Close Preferences.  
+1. In the main Camtasia window, click:
+   ```
+   New Recording
+   ```
+
+This opens **Camtasia Recorder**, which is the only tool used on macOS.
+
+---
+
+# Configure Recording Region
+
+1. In the Recorder window, click:
+   ```
+   Screen: Full
+   ```
+1. Select the **monitor** you want to capture.  
+   - Operators must capture **only one monitor**, never “All Screens.”
+
+1. Confirm the green bounding box matches the intended display.
+
+---
+
+# Configure Audio Input
+
+1. In the Recorder window, click:
+   ```
+   Audio: On
+   ```
+1. Select the correct microphone from the dropdown.  
+1. Speak a few words and confirm the input meter moves.
+
+---
+
+# Start Recording
+
+1. Position all windows exactly as they should appear in the video.  
+1. In the Recorder window, click:
+   ```
+   Start Recording
+   ```
+1. Wait for the countdown.  
+1. Perform the lesson normally.
+
+---
+
+# Stop Recording
+
+1. Press:
+   ```
+   Command + Shift + 2
+   ```
+   or click the **Stop** button in the Recorder control bar.
+
+1. Camtasia Recorder will automatically save a `.trec` file.
+
+---
+
+# Save the Recording to the RAW Folder
+
+1. In the save dialog, set the **file name**:
+   ```
+   lesson_01.trec
+   ```
+
+1. Set the **path**:
+   ```
+   ~/dev/catools-lc/ACTIVE/RAW/
+   ```
+
+1. Click:
+   ```
+   Save
+   ```
+
+---
+
+# Sanity Check the Recording (VLC Only)
+
+1. Open **Finder** and navigate to:
+   ```
+   ~/dev/catools-lc/ACTIVE/RAW/
+   ```
+1. **Right‑click**:
+   ```
+   lesson_01.trec
+   ```
+1. Choose:
+   ```
+   Open With → VLC
+   ```
+1. Play 5–10 seconds.
+
+Confirm:
+- Video exists  
+- Audio exists  
+- No corruption  
+- No silence  
+- No stutter  
+
+If any issue is found, re‑record immediately.
+
+---
+
+# Create the Project ZIP (Mac‑Exact Doctrine)
+
+The ZIP must contain **exactly one top‑level folder named `catools-lc`**, matching Linux and Windows.
+
+1. Navigate to:
+   ```
+   ~/dev/catools-lc/
+   ```
+
+1. **Select all of the following folders**:
+   ```
+   ACTIVE
+   ROLLBACK_VAULT
+   ```
+
+1. **Right‑click** the selected folders →  
+   ```
+   Compress 2 Items
+   ```
+
+1. Rename the resulting ZIP:
+   ```
+   catools-lc.zip
+   ```
+
+Resulting structure:
+
+```
+catools-lc.zip
+    catools-lc/
+        ACTIVE/
+        ROLLBACK_VAULT/
+```
+
+---
+
+# Upload ZIP to Dropbox (Browser Only)
+
+1. Open a browser.  
+1. Navigate to:
+   ```
+   https://www.dropbox.com/home/caTools/LearningCurve/lesson_01/
+   ```
+1. Upload:
+   ```
+   ~/dev/catools-lc.zip
+   ```
+
+---
+
+# Tidy Up the Mac (Stateless Doctrine)
+
+1. Delete:
+   ```
+   ~/dev/catools-lc/
+   ```
+1. Delete:
+   ```
+   ~/dev/catools-lc.zip
+   ```
+
+macOS returns to **stateless**.
+
+---
+
+# End of Mac Recording Exercise
+This completes the macOS‑only recording workflow.  
+Dehydration and editing occur on Windows in the next exercise.

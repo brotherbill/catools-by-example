@@ -1,23 +1,31 @@
-# Why configure the parent folder?
+# Why Configure the Parent Folder
+###### /caTools/LearningCurve/02-folders/2-define-parent-folder.md
 
-1. The customer should get to name the parent folder to fit their naming standards.
+## Why configure the parent folder?
+1. The customer should be able to name the parent folder to fit their naming standards.
 
-## What should be the folder structure?
-### The folder structure should allow for these caTools features:
-1. Most projects are only in Dropbox, as they are not being actively edited or published.
-1. Multiple projects can be edited, so editors can rapidly switch projects.
-1. Each project has many lock downs steps, each of which needs its own folders.
-1. A project has it active folders, which must have its standard names.
+---
+
+## What should the folder structure support?
+### The folder structure must allow these caTools features:
+1. Most projects live only in Dropbox when not being actively edited or published.
+1. Multiple projects can be edited concurrently so editors can rapidly switch projects.
+1. Each project has many lockdown steps, each requiring its own folders.
+1. A project has active folders that must follow standard names.
+
+---
 
 ## By Hand vs caTools
+
 ### By Hand
-1. This is the manual approach, where we do each step by hand, and explain it.
-    1. This is useful for learning, but impractical for large projects
-    1. While learning, everything is explained.
-    1. When creating 900 videos, this is too low level and subject to manual errors.
+1. This is the manual approach, where every step is done by hand and explained.
+1. Useful for learning, but impractical for large projects.
+1. While learning, everything is explained in detail.
+1. When creating 900 videos, this level of manual work is too slow and error‑prone.
 
 ### Using caTools
-1. This is the automatic approach, where caTools does the work quickly and efficiently.
-    1. This is useful for production assembly line of creating 900 videos.
-    1. This allows the human recorder/editor to focus on the recording or editing, and let caTools handle getting the folder paths and file names right, and fetching and storing to DropBox run.
-    1. The humans focus on recording and editing.  caTools focuses on doing the repetitive parts correct, every time, as computers are really good at following instructions reliably.
+1. This is the automatic approach, where caTools performs the work quickly and efficiently.
+1. Ideal for production workflows such as creating 900 videos.
+1. Allows the human recorder/editor to focus on recording or editing.
+1. caTools handles folder paths, filenames, Dropbox updates, and repetitive tasks.
+1. Humans focus on creative work; caTools handles the mechanical, repetitive, error‑prone parts.
