@@ -1,59 +1,50 @@
-# Exercise – Import RAW Video on Windows (Dehydration Workflow)
-###### /caTools/LearningCurve/3-EX-LC-import-raw-video-windows.md
+# /caTools/LearningCurve/3-EX-LC-import-raw-video-windows.md
 
 This exercise covers the **Windows‑only** portion of the workflow.  
-It begins after the Linux machine has uploaded the project ZIP to Dropbox.
+It begins after the Linux machine has uploaded the **project ZIP** to Dropbox.
 
-Linux recording is handled in a separate exercise.
+Windows receives **only the ZIP file**:
 
----
+```
+catools-lc.zip
+```
 
-# Important Note About RAW Input Format
-This workflow **expects the RAW video file to be in `.mkv` format**, produced by the Linux recording workflow.
-
-If the Linux recording format changes in the future (e.g., `.mov`, `.webm`, `.mp4`),  
-**update the import expectations inside this file — the filename of this MD file does not change.**
-
-The dehydration workflow remains the same; only the RAW input format changes.
+This ZIP contains the entire Linux‑side project folder (`catools-lc/`) at the correct level.  
+Its internal contents — including the MKV, the remuxed MP4, and all scaffolding — are **Linux‑side concerns** and are **not part of the Windows workflow**.
 
 ---
 
 # Goals
-1. **Download the project ZIP from Dropbox into the one correct Windows path**  
-1. **Ensure the extraction target does not exist**  
-1. **Extract the project into the deterministic Windows working folder**  
-1. **Import the RAW `.mkv` into Camtasia**  
-1. **Perform dehydration**  
-1. **Perform VLC sanity checks**  
-1. **Zip the project for upload**  
-1. **Return Windows to a stateless condition**
+1. Download the project ZIP from Dropbox  
+1. Expand the ZIP into the deterministic Windows project folder  
+1. Verify the Windows folder structure  
+1. Import the RAW `.mp4` into Camtasia  
+1. Perform dehydration  
+1. Perform VLC sanity checks  
+1. Zip the project for upload  
+1. Return Windows to a stateless condition
 
 ---
 
-# Download the ZIP from Dropbox (Windows side)
+# Download the project ZIP from Dropbox (Windows side)
 There is **only one correct Windows download location**.
 
 ### **Download must be saved to:**
 ```
-C:\dev\catools-lc.zip
+C:\dev\
 ```
 
 ### Steps
-1. Open your web browser on Windows.  
-1. Go to:
-   ```
-   https://www.dropbox.com
-   ```
-1. Sign in.  
-1. Navigate to:
+1. Open **Dropbox in a web browser**.  
+1. In **Dropbox**, **Navigate** directly to the project folder:
    ```
    /caTools/LearningCurve/lesson_01/
    ```
-1. Click **Download** on:
+1. Download:
    ```
    catools-lc.zip
    ```
-1. When the browser prompts for a save location, choose:
+1. When prompted for a save location, choose:
    ```
    C:\dev\
    ```
@@ -62,70 +53,69 @@ C:\dev\catools-lc.zip
    C:\dev\catools-lc.zip
    ```
 
-If the browser auto‑downloads to **Downloads**, move the file manually to `C:\dev\` before continuing.
-
-There is no other valid path.
-
----
-
-# Ensure extraction target does NOT exist
-Before extracting, confirm that the target folder is not already present.
-
-1. Check for:
-   ```
-   C:\dev\catools-lc\
-   ```
-1. If it exists, **delete it completely**:
-   - Right‑click → Delete  
-   - Empty Recycle Bin  
-
-The extraction target must be **absent** to prevent nested folders and contamination.
+If the browser auto‑downloads to **Downloads**, move the file manually into  
+`C:\dev\` before continuing.
 
 ---
 
-# Extract the project
-1. Right‑click:
+# Expand the ZIP into the deterministic Windows project folder
+1. In **File Explorer** or **Explorer++**, **Navigate** to:
    ```
-   C:\dev\catools-lc.zip
+   C:\dev\
    ```
-1. Choose:
+1. **Right‑click**:
+   
+   ```
+   catools-lc.zip
+   ```
+1. **Choose**:
+   
    ```
    Extract All…
    ```
-1. Extract to:
+1. **Extract** to:
+   
    ```
-   C:\dev\catools-lc\
+   C:\dev\
    ```
 
-This folder is the **only** working directory for Windows dehydration.
-
----
-
-# Ensure required subfolders exist
-The extraction should produce:
+After extraction, you must have:
 
 ```
 C:\dev\catools-lc\ACTIVE\RAW\
 C:\dev\catools-lc\ACTIVE\CAMTASIA\
+C:\dev\catools-lc\ACTIVE\ENHANCED_AUDIO\
 C:\dev\catools-lc\ACTIVE\AUDIATE\
 C:\dev\catools-lc\ACTIVE\OUT\
 ```
 
-If any folder is missing, create it manually.
+If any folder is missing, the ZIP was incorrect — return to Linux.
 
 ---
 
-# Copy RAW MKV into CAMTASIA folder
+# Verify RAW MP4 exists
+Inside the extracted folder, confirm:
+
+```
+C:\dev\catools-lc\ACTIVE\RAW\lesson_01.mp4
+```
+
+If missing, the Linux ZIP was incomplete.
+
+---
+
+# Copy RAW MP4 into CAMTASIA folder
 **Do NOT cut.**  
 The RAW folder must retain the original file.
 
-1. Navigate to:
+1. **Navigate** to:
+   
    ```
    C:\dev\catools-lc\ACTIVE\RAW\
    ```
 1. **Copy**:
    ```
-   lesson_01.mkv
+   lesson_01.mp4
    ```
 1. **Paste** into:
    ```
@@ -135,31 +125,26 @@ The RAW folder must retain the original file.
 ---
 
 # Open Camtasia and prepare a clean workspace
-1. Open **Camtasia**.  
-1. Click:
+1. **Open** **Camtasia**.  
+1. **Click**:
+   
    ```
    New Project
    ```
-   - Do NOT open any existing project  
-   - This ensures a clean, empty timeline  
-1. In the top menu, click:
+1. In the top menu, **click**:
    ```
    Media → Media Bin
    ```
-   - Ensures the Media Bin panel is visible  
-   - If already visible, do nothing  
 
 ---
 
-# Import the MKV into Camtasia
+# Import the MP4 into Camtasia
 1. Drag:
    ```
-   lesson_01.mkv
+   lesson_01.mp4
    ```
    from the CAMTASIA folder into the **Media Bin**.  
 1. Drag the clip from the Media Bin onto **Track 1**.
-
-*(This workflow assumes a single‑screen Windows setup.)*
 
 ---
 
@@ -213,7 +198,7 @@ The RAW folder must retain the original file.
 ---
 
 # Sanity check the MP4 (Windows)
-1. **Right‑click**:
+1. Right‑click:
    ```
    C:\dev\catools-lc\ACTIVE\OUT\lesson_01.mp4
    ```
@@ -251,16 +236,12 @@ If any issue is found, repeat the dehydration steps.
 ---
 
 # Upload ZIP to Dropbox (Windows side)
-1. Open your browser → https://www.dropbox.com  
+1. Open **Dropbox in a web browser**.  
 1. Navigate to:
    ```
    /caTools/LearningCurve/lesson_01/
    ```
-1. Click:
-   ```
-   Upload → Files
-   ```
-1. Select:
+1. Upload:
    ```
    C:\dev\catools-lc.zip
    ```
@@ -272,10 +253,15 @@ If any issue is found, repeat the dehydration steps.
    ```
    C:\dev\catools-lc\
    ```
-1. Windows machine returns to **stateless**.
+1. Delete:
+   ```
+   C:\dev\catools-lc.zip
+   ```
+
+Windows machine returns to **stateless**.
 
 ---
 
 # End of Windows Exercise
 This completes the Windows‑only dehydration workflow.  
-Linux recording is handled in a separate exercise.
+Linux recording, remuxing, and ZIP creation are handled in a separate exercise.

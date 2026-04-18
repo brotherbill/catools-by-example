@@ -46,6 +46,10 @@ As we are in the learning curve, we will do this manually, explaining each step.
    ```
 1. **Create folder**:  
    ```
+   CAMTASIA/
+   ```
+1. **Create folder**:  
+   ```
    ENHANCED_AUDIO/
    ```
 1. **Create folder**:  
