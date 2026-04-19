@@ -37,14 +37,14 @@
 
 1. **Save Recording** to:
    ```
-   C:\junk\
+   C:\quarantine\
    ```
    with filename:
    ```
    lesson_01.trec
    ```
 
-   - This is intentional. `C:\junk\` is the safe holding area for unverified content.
+   - This is intentional. `C:\quarantine\` is the safe holding area for unverified content.
 
 1. Saving automatically opens **Camtasia Rev**.  
 1. Click **Open in Editor** → launches **Camtasia Editor – Untitled Project**.
@@ -62,7 +62,7 @@
    ```
 1. Change folder path to:
    ```
-   C:\junk\
+   C:\quarantine\
    ```
 1. Change filename to:
    ```
@@ -80,7 +80,7 @@
    ```
    Click **No**.
 
-1. `C:\junk\` now contains:
+1. `C:\quarantine\` now contains:
    - `lesson_01.trec`  
    - `lesson_01_RAW.zip`
 
@@ -89,7 +89,7 @@
 ## Expand ZIP file and save assets in folders
 1. **Cut**:
    ```
-   C:\junk\lesson_01_RAW.zip
+   C:\quarantine\lesson_01_RAW.zip
    ```
    **Paste** into:
    ```
@@ -207,10 +207,10 @@
 
 ---
 
-## Backup C:\dev\catools-lc\ to C:\junk
+## Backup C:\dev\catools-lc\ to C:\quarantine
 1. Delete all contents of:
    ```
-   C:\junk\
+   C:\quarantine\
    ```
 1. Copy:
    ```
@@ -218,7 +218,7 @@
    ```
    to:
    ```
-   C:\junk\
+   C:\quarantine\
    ```
 
 ---
@@ -238,4 +238,3 @@
 1. Standard folder names, standard filenames, Dropbox as source of truth, and a stateless recording machine ensure survivability.  
 1. Every STOP point exists to prevent contamination.  
 1. This is our NASA‑grade toggle‑switch discipline — deterministic, repeatable, operator‑grade.
-

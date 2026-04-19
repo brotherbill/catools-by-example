@@ -1,5 +1,5 @@
-# Exercise – Create Project Scaffolding (Mac Version)
 ###### /caTools/LearningCurve/09-EX-LC-record-video-macos/1-EX-LC-create-project-scaffolding-macos.md
+# Exercise – Create Project Scaffolding (Mac Version)
 
 When creating videos, there are many assets (files) that comprise the videos and enhancements.  
 At the top, there is a parent folder that contains the folders and files for a single project.
@@ -8,72 +8,55 @@ As we are in the learning curve, we will do this manually, explaining each step.
 
 ---
 
-## Prepare junk folder (Mac)
+## Prepare quarantine folder (Mac)
 
-1. **Create junk folder** (Terminal or Finder):
-
-   **Terminal:**
-   ```bash
-   mkdir -p ~/junk/
+1. Open **Finder**.
+2. In the menu bar, click:
    ```
-
-   **Finder:**
-   - Open **Finder**
-   - In the menu bar, click:
-     ```
-     Go → Home
-     ```
-   - Create a new folder named:
-     ```
-     junk
-     ```
-
-   - This is your **safe holding area** for *suspected* or *unverified* content.  
-   - Nothing in this folder is trusted until it passes sanity checks.
+   Go → Home
+   ```
+3. Create a new folder named:
+   ```
+   quarantine
+   ```
+4. This is your **safe holding area** for *suspected* or *unverified* content.  
+   Nothing in this folder is trusted until it passes sanity checks.
 
 ---
 
 ## Parent folder
 
-1. **Create parent folder**:
-
-   **Terminal:**
-   ```bash
-   mkdir -p ~/dev/catools-lc/
+1. In **Finder**, from your **Home** folder, create a new folder named:
    ```
-
-   **Finder:**
-   - From **Home**, create:
-     ```
-     dev
-     ```
-   - Inside `dev`, create:
-     ```
-     catools-lc
-     ```
-
-1. **cd into it** (Terminal):
-   ```bash
-   cd ~/dev/catools-lc/
+   dev
    ```
-
-1. **Create subfolders**:
-   ```bash
-   mkdir -p ACTIVE ROLLBACK_VAULT
+2. Inside `dev`, create:
+   ```
+   catools-lc
+   ```
+3. Inside `catools-lc`, create:
+   ```
+   ACTIVE
+   ROLLBACK_VAULT
    ```
 
 ---
 
 ## ACTIVE/ subfolders
 
-1. **cd into ACTIVE** (Terminal):
-   ```bash
-   cd ~/dev/catools-lc/ACTIVE
+1. Open:
    ```
+   ~/dev/catools-lc/ACTIVE
+   ```
+   in Finder.
 
-1. **Create folders**:
-   ```bash
-   mkdir -p AUDIATE CAMTASIA ENHANCED_AUDIO RAW OUT
+2. Inside `ACTIVE`, create the following folders:
+   ```
+   AUDIATE
+   CAMTASIA
+   ENHANCED_AUDIO
+   RAW
+   OUT
    ```
 
 Folder layout:

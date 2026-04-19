@@ -8,57 +8,70 @@ As we are in the learning curve, we will do this manually, explaining each step.
 
 ---
 
-## Prepare junk folder (Linux)
-1. **Create junk folder**:
+## Prepare quarantine folder (Linux)
+
+1. Open the **Files** application.
+2. In the left sidebar, click:
    ```
-   ~/junk/
+   Home
    ```
-   - This is your **safe holding area** for *suspected* or *unverified* content.  
-   - Nothing in this folder is trusted until it passes sanity checks.
+3. Right‑click inside the main pane → **New Folder**.
+4. Name the folder:
+   ```
+   quarantine
+   ```
+5. This is your **safe holding area** for *suspected* or *unverified* content.  
+   Nothing in this folder is trusted until it passes sanity checks.
 
 ---
 
 ## Parent folder
-1. **Create parent folder**:
+
+1. In **Files**, from your **Home** folder, create a new folder named:
    ```
-   ~/dev/catools-lc/
+   dev
    ```
-1. **cd into it**:
+2. Inside `dev`, create:
    ```
-   cd ~/dev/catools-lc/
+   catools-lc
    ```
-1. **Create subfolders**:
+3. Inside `catools-lc`, create:
    ```
-   ACTIVE/
-   ROLLBACK_VAULT/
+   ACTIVE
+   ROLLBACK_VAULT
    ```
 
 ---
 
 ## ACTIVE/ subfolders
-1. **cd into ACTIVE**:
+
+1. Open:
    ```
-   cd ~/dev/catools-lc/ACTIVE
+   Home/dev/catools-lc/ACTIVE
    ```
-1. **Create folder**:
+   in the **Files** app.
+
+2. Inside `ACTIVE`, create the following folders:
    ```
-   AUDIATE/
-   ```
-1. **Create folder**:
-   ```
-   CAMTASIA/
-   ```
-1. **Create folder**:
-   ```
-   ENHANCED_AUDIO/
-   ```
-1. **Create folder**:
-   ```
-   OUT/
-   ```
-1. **Create folder**:
-   ```
-   RAW/
+   AUDIATE
+   CAMTASIA
+   ENHANCED_AUDIO
+   OUT
+   RAW
    ```
 
+Folder layout:
+
+```
+~/dev/catools-lc/ACTIVE/AUDIATE/
+~/dev/catools-lc/ACTIVE/CAMTASIA/
+~/dev/catools-lc/ACTIVE/ENHANCED_AUDIO/
+~/dev/catools-lc/ACTIVE/OUT/
+~/dev/catools-lc/ACTIVE/RAW/
+```
+
 ---
+
+# End of Linux Scaffolding Exercise
+This completes the Linux‑only project scaffolding setup.  
+Recording, exporting, and ZIP creation are handled in the next exercises.

@@ -1,5 +1,5 @@
-# Exercise – Record Video on macOS (Camtasia Recorder Only)
 ###### /caTools/LearningCurve/09-EX-LC-record-video-macos/2-EX-LC-record-video-macos.md
+# Exercise – Record Video on macOS (Camtasia Recorder Only)
 
 This exercise covers the **macOS‑only** portion of the workflow.  
 The Mac is used **only** as a recording device using **Camtasia Recorder**.  
@@ -24,106 +24,170 @@ All dehydration and editing occur on Windows.
 # Prepare the Mac for Recording
 
 1. **Close all unnecessary applications**  
-   - Only the recording target (browser, terminal, IDE, etc.) should remain open.  
-   - This prevents visual noise and reduces CPU load.
+   - Only the recording target (browser, terminal, IDE, etc.) should remain open.
 
 1. **Ensure external monitor is connected (if used)**  
    - Camtasia Recorder must capture the **exact monitor** you intend to record.
 
-1. **Verify audio input**  
-   - Use the macOS menu bar → Sound icon  
-   - Confirm the correct microphone is selected  
-   - Confirm input levels are active when speaking
+---
+
+# Launch Camtasia Recorder (macOS)
+
+1. Launch **Camtasia** from Applications (Spotlight: `Command + Space → Camtasia`).  
+2. Camtasia opens to:
+   ```
+   “Welcome to Camtasia Editor, <your name>!”
+   ```
+   This is expected.
 
 ---
 
-# Launch Camtasia Recorder (Mac)
+# Determine the Correct Path to the Recorder
 
-1. Open **Camtasia** from Applications.  
+Camtasia on macOS has two possible UI states.
+
+---
+
+## **Case A — “New Recording” is visible on the Welcome screen**
+If you see:
+```
+New Recording
+```
+→ **Click it immediately.**  
+→ Skip “New Project.”  
+→ Skip all Editor UI.  
+→ Go directly to the Recorder.
+
+This is the **fast path**.
+
+---
+
+## **Case B — “New Recording” is NOT visible**
+You MUST enter the Editor **only** to expose the top menu bar.
+
+1. Click:
+   ```
+   New Project
+   ```
+   This opens the Editor window.
+
 1. In the top menu bar, click:
    ```
-   Camtasia → Preferences…
-   ```
-1. Select the **Recording** tab.  
-1. Ensure:
-   - **Record Screen** is enabled  
-   - **Record Microphone** is enabled  
-   - **Record System Audio** is disabled (unless explicitly required)  
-
-1. Close Preferences.  
-1. In the main Camtasia window, click:
-   ```
-   New Recording
+   File → New Recording…
    ```
 
-This opens **Camtasia Recorder**, which is the only tool used on macOS.
+This launches **Camtasia Recorder**, which is the only tool used on macOS.
+
+**Important:**  
+- You will not save anything in the Editor.  
+- You will not touch the timeline or media bin.  
+- You will not create or save a `.tscproj`.  
+- The Editor is only a doorway to the Recorder.
 
 ---
 
-# Configure Recording Region
+# Configure Recording Region  
+(Camtasia Recorder must be open before this step.)
 
-1. In the Recorder window, click:
-   ```
-   Screen: Full
-   ```
 1. Select the **monitor** you want to capture.  
    - Operators must capture **only one monitor**, never “All Screens.”
-
-1. Confirm the green bounding box matches the intended display.
+2. Confirm the green bounding box matches the intended display.
 
 ---
 
-# Configure Audio Input
+# Configure Audio Input  
+(Camtasia Recorder must be open before this step.)
 
-1. In the Recorder window, click:
-   ```
-   Audio: On
-   ```
 1. Select the correct microphone from the dropdown.  
-1. Speak a few words and confirm the input meter moves.
+2. Speak a few words and confirm the input meter moves.
+
+---
+
+# Configure System Audio  
+(Camtasia Recorder must be open before this step.)
+
+1. Locate the **System Audio** toggle in the Recorder window.
+
+2. Choose based on your recording intent:
+
+   - **If you want system audio recorded**  
+     Toggle **System Audio: On**.  
+     Use this when the lesson requires capturing application sounds, browser audio, or demo audio.
+
+   - **If you only want your voice recorded**  
+     Toggle **System Audio: Off**.  
+     This prevents macOS notification beeps, background sounds, and application noises from being captured.
+
+3. Confirm the toggle reflects your intended recording mode before starting the lesson.
 
 ---
 
 # Start Recording
 
 1. Position all windows exactly as they should appear in the video.  
-1. In the Recorder window, click:
+   - Browser, terminal, IDE, and any other on‑screen elements should be in their final layout.
+
+2. In the Camtasia Recorder window, click the **big red button** labeled:
    ```
-   Start Recording
+   rec
    ```
-1. Wait for the countdown.  
-1. Perform the lesson normally.
+
+3. Wait for the countdown (if enabled).  
+
+4. Present your Show and Tell demonstration.
 
 ---
 
 # Stop Recording
 
-1. Press:
-   ```
-   Command + Shift + 2
-   ```
-   or click the **Stop** button in the Recorder control bar.
+1. Click the big red **rec** button again in the Recorder control bar.
 
-1. Camtasia Recorder will automatically save a `.trec` file.
+2. Camtasia will open **Camtasia Rev**, the lightweight review window.  
+   **This is expected. Do not save anything here. Do not touch anything here.**
+
+3. In Camtasia Rev, click:
+   ```
+   Open in Editor
+   ```
+   This opens the **full Camtasia Editor** (the version with the timeline).
+
+4. In the Editor, you should see the **start of your recorded video** in the Preview pane.  
+   Click **PLAY** and watch/listen for **5–10 seconds**.  
+   This quick sanity check catches:  
+   - wrong screen recorded  
+   - no audio (mic unplugged, wrong input, etc.)  
+   - notification beeps  
+   - corrupted start  
+
+   **Happy Path:**  
+   - If everything looks and sounds correct, continue to the Save the Recording step.
+
+   **“It’s Crap” Path:**  
+   - Quit Camtasia completely:  Camtasia menu → Quit Camtasia.  
+   - When macOS asks:  “Do you want to keep this new document ‘Untitled’?”  
+     click the **Delete** button.  
+   - Relaunch Camtasia and begin the recording process again.
 
 ---
 
 # Save the Recording to the RAW Folder
 
-1. In the save dialog, set the **file name**:
+1. When the **Save Recording** dialog appears, set the **file name**:
    ```
    lesson_01.trec
    ```
 
-1. Set the **path**:
+2. Set the **path**:
    ```
    ~/dev/catools-lc/ACTIVE/RAW/
    ```
 
-1. Click:
+3. Click:
    ```
    Save
    ```
+
+After this step, the `.trec` file is safely written to disk in the correct RAW folder.
 
 ---
 
@@ -158,28 +222,34 @@ If any issue is found, re‑record immediately.
 
 The ZIP must contain **exactly one top‑level folder named `catools-lc`**, matching Linux and Windows.
 
-1. Navigate to:
+**Important:**  
+To achieve this structure on macOS, you must compress the **entire `catools-lc` folder**, not the subfolders.
+
+1. In **Finder**, navigate to the parent folder that contains:
    ```
-   ~/dev/catools-lc/
+   catools-lc
    ```
 
-1. **Select all of the following folders**:
+   For example:
    ```
-   ACTIVE
-   ROLLBACK_VAULT
-   ```
-
-1. **Right‑click** the selected folders →  
-   ```
-   Compress 2 Items
+   ~/dev/
    ```
 
-1. Rename the resulting ZIP:
+1. **Right‑click** the folder:
+   ```
+   catools-lc
+   ```
+1. Choose:
+   ```
+   Compress "catools-lc"
+   ```
+
+1. Finder creates:
    ```
    catools-lc.zip
    ```
 
-Resulting structure:
+Resulting structure inside the ZIP:
 
 ```
 catools-lc.zip
@@ -187,6 +257,8 @@ catools-lc.zip
         ACTIVE/
         ROLLBACK_VAULT/
 ```
+
+This is the **only** acceptable structure.
 
 ---
 
@@ -202,23 +274,27 @@ catools-lc.zip
    ~/dev/catools-lc.zip
    ```
 
+Confirm the upload completes without errors.
+
 ---
 
 # Tidy Up the Mac (Stateless Doctrine)
 
-1. Delete:
+1. In **Finder**, delete the working folder:
    ```
    ~/dev/catools-lc/
    ```
-1. Delete:
+1. Delete the ZIP:
    ```
    ~/dev/catools-lc.zip
    ```
 
-macOS returns to **stateless**.
+The Mac now holds **no local project state**.  
+All project assets live in Dropbox and will be processed on Windows.
 
 ---
 
 # End of Mac Recording Exercise
+
 This completes the macOS‑only recording workflow.  
 Dehydration and editing occur on Windows in the next exercise.

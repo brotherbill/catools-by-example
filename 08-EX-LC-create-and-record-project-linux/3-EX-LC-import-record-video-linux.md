@@ -24,20 +24,20 @@ Linux must remain **stateless** after each session.
 # Prepare Linux for Recording
 
 1. Close all unnecessary applications.  
-1. Ensure only the target monitor is active (no virtual displays).  
-1. Confirm microphone input is active in Pop!\_OS sound settings.  
-1. Ensure OBS Studio is the **only** recording tool running.
+2. Ensure only the target monitor is active (no virtual displays).  
+3. Confirm microphone input is active in Pop!\_OS sound settings.  
+4. Ensure OBS Studio is the **only** recording tool running.
 
 ---
 
 # Launch OBS Studio
 
 1. Open **OBS Studio** from the Pop!\_OS launcher.  
-1. In the bottom‑left, click:
+2. In the bottom‑left, click:
    ```
    Scenes → Default
    ```
-1. In **Sources**, ensure there is **only one** source:
+3. In **Sources**, ensure there is **only one** source:
    ```
    Screen Capture (PipeWire)
    ```
@@ -46,19 +46,16 @@ Linux must remain **stateless** after each session.
 
 # Validate PipeWire Capture Source
 
-1. Click the **gear icon** next to the source:
+1. Click the **gear icon** next to:
    ```
-   Screen Capture (PipeWire) → Properties
+   Screen Capture (PipeWire)
    ```
-1. Ensure the selected monitor is the **exact** display you intend to record.  
-1. Ensure:
+   then choose **Properties**.
+2. Ensure the selected monitor is the **exact** display you intend to record.  
+3. Ensure:
    - **Cursor Capture**: enabled  
    - **Show Preview**: enabled  
-
-1. Click:
-   ```
-   OK
-   ```
+4. Click **OK**.
 
 ---
 
@@ -68,11 +65,11 @@ Linux must remain **stateless** after each session.
    ```
    File → Settings
    ```
-1. Select:
+2. Select:
    ```
    Output
    ```
-1. Under **Recording**:
+3. Under **Recording**:
    - **Recording Format**:
      ```
      mkv
@@ -81,22 +78,18 @@ Linux must remain **stateless** after each session.
      ```
      Software (x264)
      ```
-
-1. Click:
-   ```
-   OK
-   ```
+4. Click **OK**.
 
 ---
 
 # Start Recording
 
 1. Position all windows exactly as they should appear in the video.  
-1. In OBS, click:
+2. In OBS, click:
    ```
    Start Recording
    ```
-1. Perform the lesson normally.
+3. Perform the lesson normally.
 
 ---
 
@@ -109,7 +102,7 @@ Linux must remain **stateless** after each session.
 
 OBS saves the file to:
 ```
-~/Videos/
+Home → Videos
 ```
 
 The filename will be timestamped.
@@ -118,17 +111,17 @@ The filename will be timestamped.
 
 # Move and Rename the MKV
 
-1. Open **Files** (Pop!\_OS file manager).  
-1. Navigate to:
+1. Open the **Files** app.  
+2. Navigate to:
    ```
-   Videos
+   Home → Videos
    ```
-1. Locate the most recent `.mkv` file.  
-1. Move it to:
+3. Locate the most recent `.mkv` file.  
+4. Drag it into:
    ```
-   ~/dev/catools-lc/ACTIVE/RAW/
+   Home → dev → catools-lc → ACTIVE → RAW
    ```
-1. Rename it:
+5. Right‑click → **Rename**:
    ```
    lesson_01.mkv
    ```
@@ -137,15 +130,19 @@ The filename will be timestamped.
 
 # Sanity Check the MKV (VLC Only)
 
-1. Right‑click:
+1. In **Files**, open:
+   ```
+   Home/dev/catools-lc/ACTIVE/RAW/
+   ```
+2. Right‑click:
    ```
    lesson_01.mkv
    ```
-1. Choose:
+3. Choose:
    ```
    Open With → VLC Media Player
    ```
-1. Play 5–10 seconds.
+4. Play 5–10 seconds.
 
 Confirm:
 - Video exists  
@@ -164,17 +161,12 @@ If any issue is found, re‑record immediately.
    ```
    File → Remux Recordings
    ```
-1. Click:
+2. Click the **…** button and select:
    ```
-   ...
+   Home/dev/catools-lc/ACTIVE/RAW/lesson_01.mkv
    ```
-   and select:
-   ```
-   ~/dev/catools-lc/ACTIVE/RAW/lesson_01.mkv
-   ```
-1. OBS automatically sets the MP4 output path.
-
-1. Click:
+3. OBS automatically sets the MP4 output path.  
+4. Click:
    ```
    Remux
    ```
@@ -193,11 +185,11 @@ in the same folder.
    ```
    lesson_01.mp4
    ```
-1. Choose:
+2. Choose:
    ```
    Open With → VLC Media Player
    ```
-1. Play 5–10 seconds.
+3. Play 5–10 seconds.
 
 Confirm:
 - Video exists  
@@ -215,24 +207,23 @@ If any issue is found, repeat the remux or re‑record.
 The ZIP must contain **exactly one top‑level folder named `catools-lc`**, matching macOS and Windows.
 
 1. Open **Files**.  
-1. Navigate to:
+2. Navigate to:
    ```
-   ~/dev/catools-lc/
+   Home → dev
    ```
-1. **Select all of the following folders**:
+3. Right‑click the folder:
    ```
-   ACTIVE
-   ROLLBACK_VAULT
+   catools-lc
    ```
-1. Right‑click →  
+4. Select:
    ```
    Compress…
    ```
-1. Choose:
+5. Choose:
    ```
    .zip
    ```
-1. Name the archive:
+6. Name the archive:
    ```
    catools-lc.zip
    ```
@@ -251,30 +242,30 @@ catools-lc.zip
 # Upload ZIP to Dropbox (Browser Only)
 
 1. Open a browser.  
-1. Navigate to:
+2. Navigate to:
    ```
    https://www.dropbox.com/home/caTools/LearningCurve/lesson_01/
    ```
-1. Upload:
+3. Upload:
    ```
-   ~/dev/catools-lc.zip
+   Home/dev/catools-lc.zip
    ```
 
 ---
 
 # Tidy Up Linux (Stateless Doctrine)
 
-1. Delete:
+1. In **Files**, delete:
    ```
-   ~/dev/catools-lc/
+   Home/dev/catools-lc/
    ```
-1. Delete:
+2. Delete:
    ```
-   ~/dev/catools-lc.zip
+   Home/dev/catools-lc.zip
    ```
-1. Delete any leftover files in:
+3. Delete any leftover files in:
    ```
-   ~/Videos/
+   Home/Videos/
    ```
 
 Linux returns to **stateless**.

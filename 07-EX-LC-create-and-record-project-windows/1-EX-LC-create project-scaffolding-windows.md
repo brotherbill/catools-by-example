@@ -8,57 +8,61 @@ As we are in the learning curve, we will do this manually, explaining each step.
 
 ---
 
-## Prepare junk folder (Windows)
-1. **Create junk folder**:
+## Prepare quarantine folder (Windows)
+
+1. Open **File Explorer**.
+2. In the left sidebar, click:
    ```
-   C:\junk\
+   This PC → Local Disk (C:)
    ```
-   - This is your **safe holding area** for *suspected* or *unverified* content.  
-   - Nothing in this folder is trusted until it passes sanity checks.
+3. Create a new folder named:
+   ```
+   quarantine
+   ```
+4. This is your **safe holding area** for *suspected* or *unverified* content.  
+   Nothing in this folder is trusted until it passes sanity checks.
 
 ---
 
 ## Parent folder
-1. **Create parent folder**:
+
+1. In **File Explorer**, open:
    ```
-   C:\dev\catools-lc\
+   C:\
    ```
-1. **cd into it**:
+2. Create a new folder named:
    ```
-   cd C:\dev\catools-lc\
+   dev
    ```
-1. **Create subfolders**:
+3. Inside `dev`, create:
    ```
-   ACTIVE\
-   ROLLBACK_VAULT\
+   catools-lc
+   ```
+4. Inside `catools-lc`, create:
+   ```
+   ACTIVE
+   ROLLBACK_VAULT
    ```
 
 ---
 
 ## ACTIVE\ subfolders
-1. **cd into ACTIVE**:
+
+1. Open:
    ```
-   cd C:\dev\catools-lc\ACTIVE
+   C:\dev\catools-lc\ACTIVE
    ```
-1. **Create folder**:
+   in File Explorer.
+
+2. Inside `ACTIVE`, create the following folders:
    ```
-   AUDIATE\
-   ```
-1. **Create folder**:
-   ```
-   CAMTASIA\
-   ```
-1. **Create folder**:
-   ```
-   ENHANCED_AUDIO\
-   ```
-1. **Create folder**:
-   ```
-   RAW\
-   ```
-1. **Create folder**:
-   ```
-   OUT\
+   AUDIATE
+   CAMTASIA
+   ENHANCED_AUDIO
+   RAW
+   OUT
    ```
 
 ---
+
+# End of Windows Scaffolding Exercise

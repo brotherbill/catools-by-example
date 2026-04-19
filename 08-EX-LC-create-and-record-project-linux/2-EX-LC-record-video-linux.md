@@ -41,23 +41,32 @@ update the “Recording Format” section inside this file — the filename does
 ---
 
 # Remove COSMIC Media Player (one‑time)
-1. COSMIC Media Player starts muted and cannot be trusted for sanity checks.  
-1. Remove it:
-   ```bash
-   sudo apt remove cosmic-media-player
+COSMIC Media Player starts muted and cannot be trusted for sanity checks.
+
+1. Open **Pop!\_Shop** (or your distro’s software center).  
+2. Search for:
    ```
+   COSMIC Media Player
+   ```
+3. Click **Remove**.  
+4. Confirm removal.
 
 ---
 
 # Configure OBS Studio (one‑time setup, verify every session)
 
 ## Output Settings
-1. Settings → Output → Output Mode:
+1. Open **OBS Studio**.  
+2. Click:
    ```
-   Advanced
+   Settings → Output
    ```
-1. Settings → Output → Recording:
-   - Type:
+3. Set:
+   - Output Mode:
+     ```
+     Advanced
+     ```
+   - Recording → Type:
      ```
      Standard
      ```
@@ -119,44 +128,52 @@ update the “Recording Format” section inside this file — the filename does
      ```
      Stereo
      ```
-1. Disable all global audio devices except the microphone.
+2. Disable all global audio devices except the microphone.
 
 ---
 
 # Prepare for recording
-1. **Open** OBS Studio.  
-1. **Verify** capture source:
+1. Open **OBS Studio**.  
+2. In the **Sources** panel, verify:
    ```
    Screen Capture (PipeWire)
    ```
-1. **Verify** the correct monitor is selected.  
-1. **Verify** microphone is selected and system audio is disabled.  
-1. **Speak** into the mic — meter must move.
+3. Verify the correct monitor is selected.  
+4. Verify the correct microphone is selected.  
+5. Speak into the mic — the meter must move.
 
 ---
 
 # Record the video
 1. Click **Start Recording**.  
-1. Perform the presentation.  
-1. Click **Stop Recording**.  
-1. OBS saves to:
+2. Perform the presentation.  
+3. Click **Stop Recording**.  
+4. OBS saves the file into your **Videos** folder by default.
+
+5. Open the **Files** app.  
+6. Navigate to:
    ```
-   ~/junk/
+   Home → Videos
    ```
-1. Rename the file:
+7. Locate the newest `.mkv` file.  
+8. Right‑click → **Rename**:
    ```
    lesson_01.mkv
+   ```
+9. Move it into:
+   ```
+   Home → quarantine
    ```
 
 ---
 
 # Playback sanity check (Linux)
-1. Right‑click:
+1. In **Files**, open:
    ```
-   ~/junk/lesson_01.mkv
+   Home → quarantine
    ```
-1. Open With → **VLC Media Player**.  
-1. Confirm:
+2. Right‑click `lesson_01.mkv` → **Open With → VLC Media Player**.  
+3. Confirm:
    - Video exists  
    - Audio exists  
    - Mic correct  
@@ -168,34 +185,45 @@ If audio is missing → re‑record.
 ---
 
 # Move MKV into project scaffolding
-1. Ensure the deterministic folder structure exists:
+1. In **Files**, open:
    ```
-   ~/dev/catools-lc/ACTIVE/RAW/
-   ~/dev/catools-lc/ACTIVE/CAMTASIA/
-   ~/dev/catools-lc/ACTIVE/AUDIATE/
-   ~/dev/catools-lc/ACTIVE/OUT/
+   Home/dev/catools-lc/ACTIVE/RAW/
    ```
-1. Move the MKV:
+2. Drag:
    ```
-   ~/junk/lesson_01.mkv  →  ~/dev/catools-lc/ACTIVE/RAW/
+   lesson_01.mkv
+   ```
+   from:
+   ```
+   Home/quarantine
+   ```
+   into:
+   ```
+   ACTIVE/RAW
    ```
 
 ---
 
 # Remux MKV → MP4 (Linux side, lossless)
-1. Open OBS Studio.  
-1. File → **Remux Recordings**.  
-1. Select:
+1. Open **OBS Studio**.  
+2. Click:
    ```
-   ~/dev/catools-lc/ACTIVE/RAW/lesson_01.mkv
+   File → Remux Recordings
    ```
-1. OBS auto‑creates:
+3. Click **…** and select:
    ```
-   ~/dev/catools-lc/ACTIVE/RAW/lesson_01.mp4
+   Home/dev/catools-lc/ACTIVE/RAW/lesson_01.mkv
    ```
-1. Click **Remux**.  
-1. Confirm “Remuxing finished.”  
-1. Click **Close**.
+4. OBS automatically sets the MP4 output path:
+   ```
+   lesson_01.mp4
+   ```
+5. Click **Remux**.  
+6. Wait for:
+   ```
+   Remuxing finished.
+   ```
+7. Click **Close**.
 
 The `.mp4` is bit‑for‑bit identical to the `.mkv`.
 
@@ -204,59 +232,49 @@ The `.mp4` is bit‑for‑bit identical to the `.mkv`.
 # Create deterministic ZIP (GUI‑only)
 The ZIP must contain **exactly one top‑level folder named `catools-lc`**.
 
-1. Open **Files** app.  
-1. Navigate to:
+1. Open **Files**.  
+2. Navigate to:
    ```
-   Home > dev
+   Home → dev
    ```
-1. **Select all** of the following folders:
+3. Right‑click the folder:
    ```
-   ACTIVE
-   ROLLBACK_VAULT
+   catools-lc
    ```
-1. **Right‑click** the selected folders → **Compress**.  
-1. In the **Create Archive** dialog:
-   - File name:
+4. Select:
+   ```
+   Compress...
+   ```
+5. In the dialog:
+   - Name:
      ```
      catools-lc
      ```
      *(Do NOT type `.zip` — the system adds it.)*
-   - Password: leave blank  
-   - Click **Create**
+   - Click **Create**.
 
-1. This produces:
-   ```
-   ~/dev/catools-lc.zip
-   ```
+This produces:
+```
+~/dev/catools-lc.zip
+```
 
 ---
 
 # Upload ZIP to Dropbox (browser only)
-Linux must use **browser‑only** Dropbox.
-
-1. Open browser → https://www.dropbox.com  
-
-1. Build the full nested folder path:
-
-   - Ensure:
-     ```
-     /caTools/
-     ```
-   - Inside it:
-     ```
-     LearningCurve
-     ```
-   - Inside it:
-     ```
-     lesson_01
-     ```
-
-1. Enter:
+1. Open your browser → https://www.dropbox.com  
+2. Navigate to:
    ```
-   /caTools/LearningCurve/lesson_01/
+   /caTools/
    ```
-
-1. Upload:
+3. Inside it, ensure:
+   ```
+   LearningCurve
+   ```
+4. Inside it, ensure:
+   ```
+   lesson_01
+   ```
+5. Upload:
    ```
    ~/dev/catools-lc.zip
    ```
@@ -270,17 +288,17 @@ Windows must receive the **ZIP**.
 ---
 
 # Tidy up Linux (return to stateless)
-1. Delete contents of:
+1. In **Files**, delete all contents of:
    ```
-   ~/junk/
+   Home/quarantine
    ```
-1. Delete contents of:
+2. Delete all contents of:
    ```
-   ~/dev/catools-lc/
+   Home/dev/catools-lc
    ```
-1. Delete:
+3. Delete:
    ```
-   ~/dev/catools-lc.zip
+   Home/dev/catools-lc.zip
    ```
 
 Linux returns to a clean, stateless condition.
