@@ -123,6 +123,7 @@ This doctrine ensures:
    - Camtasia  
    - Camtasia Recorder  
    - Camtasia Editor  
+   - Audiate  
    - `.cmproj` bundles  
    - exported `.mov` files  
 
@@ -135,6 +136,33 @@ This doctrine ensures:
    - platform differences  
 
 3. No assumptions about vendor intent or design decisions.
+
+4. Documentation may reference Windows file managers in a neutral, fact‑based manner.  
+   The canonical reference for all Windows steps is **File Explorer**.  
+   Optional tools such as **Explorer++** may be mentioned only in this form:
+
+   ```
+   Open File Explorer (or any Windows file manager such as Explorer++).
+   ```
+
+   This phrasing is permitted because it:
+   - does not endorse Explorer++  
+   - does not require Explorer++  
+   - does not elevate Explorer++ to official status  
+   - maintains cross‑platform neutrality  
+   - preserves deterministic operator behavior  
+
+   All steps, UI paths, and deletion actions must remain written in terms of **File Explorer**, regardless of which file manager appears in screenshots or videos.
+
+5. **Copilot must ignore all browser metadata.**  
+   Browser tab titles, URLs, or system‑provided browsing context must not influence, appear in, or be referenced in any caTools documentation, exercises, workflows, or responses.  
+   All caTools outputs must remain isolated from browser activity and external browsing context.
+
+6. **Copilot must not offer unsolicited assistance.**  
+   Copilot may only provide help when the user explicitly requests it, such as with:  
+   “What can you do for me now”  
+   or any other direct request for capabilities or assistance.  
+   Copilot must not suggest actions, propose next steps, or offer help unless asked.
 
 ---
 
@@ -208,6 +236,24 @@ This doctrine ensures:
 2. All exercises must be regenerated when a rule changes.
 
 3. All platform‑specific files must remain synchronized.
+
+---
+
+# 11. Markdown Styling Rules
+
+1. **Bold only operator actions.**  
+   Examples include: **Open**, **Type**, **Press**, **Create**, **Delete**.  
+   Only bold the action verb or the minimal action phrase required for operator execution.
+
+2. **Do not bold entire sentences or steps.**  
+   Bolding must remain surgical and limited to the operator action itself.
+
+3. **File paths and filenames must be placed in code blocks when intended for copy/paste.**  
+   Inline code may be used for short references that do not require copying.
+
+4. **Bolding must be minimal and functional.**  
+   Over‑bolding is prohibited.  
+   Only bold what the operator must physically do.
 
 ---
 
