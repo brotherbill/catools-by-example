@@ -16,7 +16,7 @@ Recordings are exported as standalone `.mov` files for cross‑platform compatib
 1. Record the lesson  
 1. Save the temporary project bundle  
 1. Export the recording as a `.mov` file  
-1. Perform VLC sanity checks  
+1. Perform QuickTime sanity checks  
 1. Create the project ZIP  
 1. Upload ZIP to Dropbox  
 1. Return macOS to a stateless condition  
@@ -124,7 +124,10 @@ This opens the recording inside the Camtasia Editor.
 If the recording is not usable:
 
 1. Quit Camtasia.  
-2. When prompted to keep or delete the unsaved project, select **Delete**.  
+2. When prompted to keep or delete the unsaved project, select:
+   ```
+   Delete
+   ```
 3. Restart the recording process.
 
 ---
@@ -147,7 +150,6 @@ macOS Camtasia saves recordings as `.cmproj` bundles.
    ```
    ~/dev/catools-lc/ACTIVE/RAW/
    ```
-
 4. Select **Save**.
 
 The file saved to disk will be:
@@ -162,19 +164,17 @@ This bundle is required for export.
 
 # Export the Recording as a `.mov` File (Cross‑Platform Asset) – Videographer
 
-To produce the Windows‑compatible recording, export a standalone `.mov` file.
-
 1. With the project open in Camtasia Editor, select:
    ```
    File → Export → Local File…
    ```
 
-The export dialog appears with the following fields, **top to bottom**:
+The export dialog appears with the following fields, top to bottom.
 
 ---
 
 ### 1. Export As  
-Default contents (based on the project name):
+Default contents:
 
 ```
 lesson_01.mp4
@@ -195,8 +195,6 @@ Set the folder path to:
 ~/dev/catools-lc/ACTIVE/RAW/
 ```
 
-This ensures the exported `.mov` file is written directly into RAW.
-
 ---
 
 ### 3. File Format  
@@ -206,30 +204,24 @@ Default:
 Export to MP4 (.mp4)
 ```
 
-Videographers must change this to:
+Change this to:
 
 ```
 Export to QuickTime Movie (.mov)
 ```
 
-This produces the high‑fidelity cross‑platform recording asset.
-
 ---
 
 ### 4. Export Button  
-At the bottom right of the dialog, **click** the large blue button labeled:
+Select:
 
 ```
 Export
 ```
 
-After clicking **Export**, Camtasia may display a confirmation dialog indicating that the export has completed.  
-This dialog offers two options:
+If Camtasia displays a confirmation dialog, select **Close** or **Reveal in Finder** as needed.
 
-- **Close** – dismisses the dialog  
-- **Reveal in Finder** – opens a Finder window showing the exported file  
-
-If **Reveal in Finder** is selected, the Finder window will display both files created during the workflow:
+If **Reveal in Finder** is selected, the Finder window will display:
 
 ```
 lesson_01.mov
@@ -240,8 +232,6 @@ lesson_01.cmproj
 
 # Close Camtasia (Videographer)
 
-After confirming that the `.mov` file has been exported:
-
 1. In the top menu bar, select:
    ```
    Camtasia 2024 → Quit Camtasia
@@ -251,19 +241,14 @@ After confirming that the `.mov` file has been exported:
    Delete
    ```
 
-Camtasia is now closed. No Camtasia windows remain open.
+---
 
 # Delete the `.cmproj` File (Videographer)
 
-1. Open **Finder**.
+1. Open **Finder**.  
 2. Navigate to:
    ```
    ~/dev/catools-lc/ACTIVE/RAW/
-   ```
-   The folder contains:
-   ```
-   lesson_01.cmproj
-   lesson_01.mov
    ```
 3. Right‑click:
    ```
@@ -276,7 +261,7 @@ Camtasia is now closed. No Camtasia windows remain open.
 
 ---
 
-# Sanity Check the `.mov` File (VLC) – Videographer
+# Sanity Check the `.mov` File (QuickTime) – Videographer
 
 1. In Finder, right‑click:
    ```
@@ -284,7 +269,7 @@ Camtasia is now closed. No Camtasia windows remain open.
    ```
 2. Select:
    ```
-   Open With → VLC
+   Open With → QuickTime Player (default)
    ```
 3. Play 5–10 seconds and confirm:
    - Video present  
@@ -292,7 +277,33 @@ Camtasia is now closed. No Camtasia windows remain open.
    - No corruption  
    - No stutter  
 
-If issues are found, re‑record.
+---
+
+## Happy Path — Recording Is Good
+
+If the recording passes the sanity check, proceed to the next section:
+
+```
+Create the Project ZIP (macOS) – Videographer
+```
+
+---
+
+## Recovery Path — Recording Failed
+
+If issues are found:
+
+1. Delete the `.mov` file.  
+2. Confirm that no `.cmproj` file remains in:
+   ```
+   ~/dev/catools-lc/ACTIVE/RAW/
+   ```
+3. Close Camtasia if it is open.  
+4. Return to the section:
+   ```
+   Launch Camtasia Recorder (macOS) – Videographer
+   ```
+5. Start a new recording.
 
 ---
 

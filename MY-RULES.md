@@ -189,6 +189,16 @@ This doctrine ensures:
    The verb **Remove** must not be used for file deletion.  
    All documentation must use **Delete** consistently when referring to operator actions that delete files.
 
+6. **All conditional procedures must be written using two explicit branches:**
+
+   ```
+   Happy Path — the successful outcome and next steps.
+   Recovery Path — the failure outcome and the exact steps required to return to a known‑good state.
+   ```
+
+   No conditional step may imply its next action.  
+   All branches must be explicit, labeled, and deterministic.
+
 ---
 
 # 10. Zero Drift Rules
