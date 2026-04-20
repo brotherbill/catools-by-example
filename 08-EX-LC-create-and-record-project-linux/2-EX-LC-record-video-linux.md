@@ -260,30 +260,20 @@ This produces:
 
 ---
 
-# Upload ZIP to Dropbox (browser only)
-1. Open your browser → https://www.dropbox.com  
-2. Navigate to:
+# Upload ZIP to Dropbox – Videographer
+
+1. Open a browser and go to:
    ```
-   /caTools/
+   https://www.dropbox.com
    ```
-3. Inside it, ensure:
+1. In Dropbox, navigate to:
    ```
-   LearningCurve
+   /caTools/LearningCurve/lesson_01
    ```
-4. Inside it, ensure:
-   ```
-   lesson_01
-   ```
-5. Upload:
+1. Upload:
    ```
    ~/dev/catools-lc.zip
    ```
-
-Do **not** upload individual files.  
-Do **not** upload the MKV.  
-Do **not** upload the MP4 alone.
-
-Windows must receive the **ZIP**.
 
 ---
 

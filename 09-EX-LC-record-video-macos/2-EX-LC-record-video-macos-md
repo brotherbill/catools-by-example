@@ -279,6 +279,19 @@ lesson_01.cmproj
 
 ---
 
+# Reset Context Before Branching (Required)
+
+Before proceeding:
+
+1. Quit QuickTime Player:
+   - In the top menu bar, select:
+     ```
+     QuickTime Player → Quit QuickTime Player
+     ```
+   - QuickTime Player closes.
+
+---
+
 ## Happy Path — Recording Is Good
 
 If the recording passes the sanity check, proceed to the next section:
@@ -293,31 +306,37 @@ Create the Project ZIP (macOS) – Videographer
 
 If issues are found:
 
-1. Delete the `.mov` file.  
-2. Confirm that no `.cmproj` file remains in:
+1. Open **Finder**.
+2. Navigate to:
    ```
    ~/dev/catools-lc/ACTIVE/RAW/
    ```
-3. Close Camtasia if it is open.  
-4. Return to the section:
+3. Delete the `.mov` file.
+4. Confirm that no `.cmproj` file remains in:
+   ```
+   ~/dev/catools-lc/ACTIVE/RAW/
+   ```
+5. Close Camtasia if it is open.
+6. Return to the section:
    ```
    Launch Camtasia Recorder (macOS) – Videographer
    ```
-5. Start a new recording.
+7. Start a new recording.
 
 ---
 
 # Create the Project ZIP (macOS) – Videographer
 
-The ZIP must contain exactly one top‑level folder:
-
-```
-catools-lc/
-```
-
-1. Navigate to the parent folder containing `catools-lc`.  
-2. Right‑click `catools-lc`.  
-3. Select:
+1. Open **Finder**.
+2. Navigate to:
+   ```
+   ~/dev/
+   ```
+3. Right‑click:
+   ```
+   catools-lc
+   ```
+4. Select:
    ```
    Compress "catools-lc"
    ```
@@ -325,16 +344,22 @@ catools-lc/
 This produces:
 
 ```
-catools-lc.zip
+~/dev/catools-lc.zip
 ```
 
 ---
 
 # Upload ZIP to Dropbox – Videographer
 
-1. Open a browser.  
-2. Navigate to the appropriate Dropbox folder.  
-3. Upload:
+1. Open a browser and go to:
+   ```
+   https://www.dropbox.com
+   ```
+1. In Dropbox, navigate to:
+   ```
+   /caTools/LearningCurve/lesson_01
+   ```
+1. Upload:
    ```
    ~/dev/catools-lc.zip
    ```
@@ -343,20 +368,16 @@ catools-lc.zip
 
 # Tidy Up macOS (Stateless Doctrine) – Videographer
 
-1. Delete:
+1. Open **Finder**.
+2. Navigate to:
+   ```
+   ~/dev/
+   ```
+3. Delete:
    ```
    ~/dev/catools-lc/
    ```
-2. Delete:
+4. Delete:
    ```
    ~/dev/catools-lc.zip
    ```
-
-macOS now contains no project state.
-
----
-
-# End of macOS Recording Exercise
-
-This completes the macOS recording workflow.  
-All editing and dehydration occur on Windows and are performed by **Editors**.
