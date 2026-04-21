@@ -14,26 +14,26 @@
 ## Prepare for recording
 1. **Open Camtasia Recorder**  
    - The window title is **Camtasia Editor Recorder**.  
-   - Ignore the “Editor” part — the Recorder has **no editing capabilities**.
+   - Ignore the “Editor” part — the Recorder has no editing capabilities.
 
 1. **Verify your inputs**  
-   - Confirm the **correct screen** is selected.  
-   - Confirm the **correct microphone** is selected.  
-   - Decide whether to record **System Audio** (Off to avoid Windows notification sounds).
+   - Confirm the correct screen is selected.  
+   - Confirm the correct microphone is selected.  
+   - Decide whether to record System Audio (Off to avoid Windows notification sounds).
 
 1. **Perform a microphone sanity check**  
    - Speak into the microphone.  
    - If the voice meter does not move, **close and re‑open Camtasia Recorder**.  
-   - Camtasia will record video with **no audio** and will not warn you.  
+   - Camtasia will record video with no audio and will not warn you.  
    - This check prevents silent‑audio failures.
 
 ---
 
 ## Record the video and audio
-1. Click the big red **rec** button.  
-1. Wait for the **3‑second countdown**.  
+1. **Click** the big red **rec** button.  
+1. Wait for the **3‑second countdown**. Pause briefly to allow the recording pipeline to stabilize before beginning.  
 1. Perform the lesson.  
-1. Click the big red **rec** button again to stop the recording.
+1. **Click** the big red **rec** button again to stop the recording.
 
 1. **Save Recording** to:
    ```
@@ -43,16 +43,14 @@
    ```
    lesson_01.trec
    ```
-1. Click **Save**.
+1. **Click** Save.
 
-   - This is intentional. `C:\quarantine\` is the safe holding area for unverified content.
-
-1. Saving automatically opens **Camtasia Rev**.  
-1. Click **Open in Editor** → launches **Camtasia Editor – Untitled Project**.
+1. Saving automatically opens Camtasia Rev.  
+1. **Click** Open in Editor → launches **Camtasia Editor – Untitled Project**.
 
    - **STOP. Do not save. Do not edit.**  
    - Hands off keyboard and mouse.  
-   - This machine does **not** perform editing.
+   - This machine does not perform editing.
 
 ---
 
@@ -61,15 +59,15 @@
    ```
    File → Export → Zipped Project...
    ```
-1. Change folder path to:
+1. On the “Export Project As Zip” dialog, change the folder path to:
    ```
    C:\quarantine\
    ```
-1. Change filename to:
+1. Change File name to:
    ```
    lesson_01_RAW.zip
    ```
-1. Click **Save**.
+1. **Click** Save.
 
 1. Exit Camtasia:
    ```
@@ -79,11 +77,19 @@
    ```
    Save changes to Untitled Project.tscproj?
    ```
-   Click **No**.
+   Videographers are conditioned to click Yes when asked to save changes. In this workflow, clicking No is intentional and required. Follow this step exactly as written.
+   **Click** No.
 
-1. `C:\quarantine\` now contains:
-   - `lesson_01.trec`  
+1. Open File Explorer (or Explorer++), navigate to:
+   ```
+   C:\quarantine\
+   ```
+
+1. You should see exactly the following two files:
+   - `lesson_01.trec`
    - `lesson_01_RAW.zip`
+
+1. Confirm that **only** these two files are present and no others.
 
 ---
 
@@ -111,21 +117,21 @@
 ---
 
 ## Import into Windows Camtasia (Editor)
-1. Open **Windows Camtasia** → **STOP**.  
-1. Click **New Project** → **STOP**.
+1. **Open** Windows Camtasia → **STOP**.  
+1. **Click** New Project → **STOP**.
 
 1. **Drag**:
    ```
    C:\dev\catools-lc\ACTIVE\RAW\lesson_01.trec
    ```
-   into the **Media Bin**.
+   into the Media Bin.
 
 1. Right‑click `lesson_01.trec` → **Add to Timeline at Playhead**.  
 1. Right‑click the clip on Track 1 → **Separate Audio and Video**.
 
 1. Rename tracks:
-   - Track 1 → **Video**  
-   - Track 2 → **Audio**
+   - Track 1 → Video  
+   - Track 2 → Audio
 
 ---
 
@@ -141,7 +147,7 @@
    ```
    lesson_01_RAW.wav
    ```
-1. Click **Save**.
+1. **Click** Save.
 
 ---
 
@@ -161,10 +167,10 @@
    ```
    C:\dev\catools-lc\ACTIVE\RAW\
    ```
-1. Click **Export**.
+1. **Click** Export.
 
 1. When the exporter finishes:
-   - Click **Open File Location**  
+   - **Click** Open File Location  
    - Confirm the MP4 exists in the correct folder.
 
 1. **Play 5–10 seconds** in your default player.  
@@ -184,7 +190,7 @@
    ```
 
 - Saving here contaminates the workflow.  
-- This machine does **not** store `.tscproj` files.
+- This machine does not store `.tscproj` files.
 
 ---
 
@@ -198,8 +204,8 @@
    catools-lc_lesson_01_YYYY-MM-DDTHHMMSS.zip
    ```
 
-   - Timestamp must be **GMT**.  
-   - The **T** is literal.
+   - Timestamp must be GMT.  
+   - The T is literal.
 
 1. Upload the ZIP to:
    ```
@@ -209,11 +215,11 @@
 ---
 
 ## Backup C:\dev\catools-lc\ to C:\quarantine
-1. Delete all contents of:
+1. **Delete** all contents of:
    ```
    C:\quarantine\
    ```
-1. Copy:
+1. **Copy**:
    ```
    C:\dev\catools-lc\
    ```
@@ -225,11 +231,11 @@
 ---
 
 ## Delete contents of C:\dev\catools-lc\
-1. Delete everything inside:
+1. **Delete** everything inside:
    ```
    C:\dev\catools-lc\
    ```
-1. The Windows machine is now **stateless** and ready for the next recording.
+1. The Windows machine is now stateless and ready for the next recording.
 
 ---
 
