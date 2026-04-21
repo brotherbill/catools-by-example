@@ -20,7 +20,21 @@ This step occurs **immediately after** the ZIP expansion and **before** importin
    C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\bin\
    ```
 
-2. **Download** the official Windows ffmpeg ZIP archive from the ffmpeg builds page.
+2. **Download** this exact file from the official ffmpeg builds page:
+   - Open: https://www.gyan.dev/ffmpeg/builds/
+   - In the “Release builds” section, locate the file named:
+     ffmpeg-8.1-essentials_build.zip
+   - **Click directly on the text `ffmpeg-8.1-essentials_build.zip` to begin the download.**
+   - When the browser prompts for a download location, **navigate to this exact folder**:
+     C:\dev\quarantine\
+   - When the browser prompts for a file name, **ensure the file name is exactly**:
+     ffmpeg-8.1-essentials_build.zip
+   - **Click the `Save` button** to start the download.
+   - Do not download “full”, “full-shared”, “git”, “7z”, or other installer variants.
+   - **Open File Explorer (or Explorer++)**, navigate to:
+     C:\dev\quarantine\
+     and confirm that the file **ffmpeg-8.1-essentials_build.zip** is present.
+
 
 3. **Extract** the ZIP archive to a temporary location.
 
