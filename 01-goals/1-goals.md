@@ -1,5 +1,5 @@
 # Goals of Using Camtasia + Audiate + caTools
-###### /caTools/LearningCurve/01-goals/1-goals.md
+###### C:/dev/catools-by-example/01-goals/1-goals.md
 
 ### Goals of using Camtasia + Audiate + caTools
 1. Use the power of C + A, while avoiding breaking your projects.
