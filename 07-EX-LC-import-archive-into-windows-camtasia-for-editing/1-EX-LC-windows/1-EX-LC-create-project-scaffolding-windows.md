@@ -1,6 +1,5 @@
-
-###### /caTools/LearningCurve/07-EX-LC-import-archive-into-windows-camtasia-for-editing/1-EX-LC-create-project-scaffolding-windows.md
 # Exercise – Create Project Scaffolding (Windows Version)
+###### C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/1-EX-LC-windows/1-EX-LC-create-project-scaffolding-windows.md
 
 This exercise defines the required folder structure for Windows‑based editing in the caTools workflow. All steps must be followed exactly to ensure cross‑platform consistency and deterministic behavior.
 
