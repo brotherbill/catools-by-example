@@ -19,7 +19,7 @@
 1. **Verify your inputs**  
    - Confirm the **correct screen** is selected.  
    - Confirm the **correct microphone** is selected.  
-   - Decide whether to record **System Audio** (default: do not).
+   - Decide whether to record **System Audio** (Off to avoid Windows notification sounds).
 
 1. **Perform a microphone sanity check**  
    - Speak into the microphone.  
@@ -30,10 +30,10 @@
 ---
 
 ## Record the video and audio
-1. Click the big red **REC** button.  
+1. Click the big red **rec** button.  
 1. Wait for the **3‑second countdown**.  
 1. Perform the lesson.  
-1. Click **Stop** to end the recording.
+1. Click the big red **rec** button again to stop the recording.
 
 1. **Save Recording** to:
    ```
@@ -43,6 +43,7 @@
    ```
    lesson_01.trec
    ```
+1. Click **Save**.
 
    - This is intentional. `C:\quarantine\` is the safe holding area for unverified content.
 

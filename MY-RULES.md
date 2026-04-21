@@ -1,7 +1,7 @@
 # MY RULES – caTools Doctrine (Master File)
 ###### C:/dev/catools-by-example/MY-RULES.md
 
-This file defines the **non‑negotiable rules** for all caTools workflows, exercises, and procedures.  
+This file defines the non‑negotiable rules for all caTools workflows, exercises, and procedures.  
 All platform‑specific exercises (Windows, macOS, Linux) must comply with these rules without exception.
 
 This doctrine ensures:
@@ -23,7 +23,7 @@ This doctrine ensures:
    Only the content of the file itself.
 
 3. **No conversational tone** inside Markdown files.  
-   Markdown files must read as **technical documentation**, not chat.
+   Markdown files must read as technical documentation, not chat.
 
 4. **All filenames must be OS‑pure and machine‑pure.**  
    No spaces.  
@@ -55,16 +55,16 @@ This doctrine ensures:
 3. Folder names are **UPPERCASE** inside ACTIVE.  
    This is required for cross‑OS consistency.
 
-4. macOS, Windows, and Linux must all use the **same folder names** even if a platform does not use a particular tool.
+4. macOS, Windows, and Linux must all use the same folder names even if a platform does not use a particular tool.
 
 ---
 
 # 3. Statelessness Rules
 
-1. macOS and Linux must remain **stateless** after each exercise.  
+1. macOS and Linux must remain stateless after each exercise.  
    All project assets must be deleted after ZIP upload.
 
-2. Windows is the **stateful dehydration platform**.  
+2. Windows is the stateful dehydration platform.  
    All editing, exporting, and dehydration occur on Windows only.
 
 3. No `.tscproj` files are ever saved on macOS or Linux.
@@ -73,7 +73,7 @@ This doctrine ensures:
 
 # 4. Recording Rules (Cross‑Platform)
 
-1. macOS uses **Camtasia Recorder only**.  
+1. macOS uses Camtasia Recorder only.  
    No editing occurs on macOS.
 
 2. macOS saves recordings as `.cmproj` bundles.  
@@ -83,17 +83,23 @@ This doctrine ensures:
 
 4. Windows is the only platform used by Editors for editing and dehydration.
 
+5. **All Camtasia Recorder workflows must include a mandatory post‑countdown pause:**  
+   ```
+   Wait for the **3‑second countdown**. Pause briefly to allow the recording pipeline to stabilize before beginning.
+   ```  
+   This line is standardized and must appear identically in all platform‑specific recording exercises.
+
 ---
 
 # 5. ZIP Creation Rules
 
-1. The ZIP must contain **exactly one top‑level folder**:
+1. The ZIP must contain exactly one top‑level folder:
 
    ```
    catools-lc/
    ```
 
-2. Videographers and Editors must compress the **entire folder**, not subfolders.
+2. Videographers and Editors must compress the entire folder, not subfolders.
 
 3. ZIP structure must match Windows and Linux exactly.
 
@@ -109,7 +115,7 @@ This doctrine ensures:
    lesson_03
    ```
 
-2. Videographers must type the filename **without extension**.  
+2. Videographers must type the filename without extension.  
    The platform will append the correct extension automatically.
 
 3. No spaces, no hyphens, no camelCase.
@@ -118,7 +124,7 @@ This doctrine ensures:
 
 # 7. Tone and Documentation Rules
 
-1. All documentation must use a **neutral, fact‑based tone** when referencing:
+1. All documentation must use a neutral, fact‑based tone when referencing:
    - TechSmith  
    - Camtasia  
    - Camtasia Recorder  
@@ -138,48 +144,34 @@ This doctrine ensures:
 3. No assumptions about vendor intent or design decisions.
 
 4. Documentation may reference Windows file managers in a neutral, fact‑based manner.  
-   The canonical reference for all Windows steps is **File Explorer**.  
-   Optional tools such as **Explorer++** may be mentioned only in this form:
+   The canonical reference for all Windows steps is File Explorer.  
+   Optional tools such as Explorer++ may be mentioned only in this form:
 
    ```
    Open File Explorer (or any Windows file manager such as Explorer++).
    ```
 
-   This phrasing is permitted because it:
-   - does not endorse Explorer++  
-   - does not require Explorer++  
-   - does not elevate Explorer++ to official status  
-   - maintains cross‑platform neutrality  
-   - preserves deterministic operator behavior  
+5. Copilot must ignore all browser metadata.  
+   Browser tab titles, URLs, or system‑provided browsing context must not influence, appear in, or be referenced in any caTools documentation.
 
-   All steps, UI paths, and deletion actions must remain written in terms of **File Explorer**, regardless of which file manager appears in screenshots or videos.
+6. Copilot must not offer unsolicited assistance.  
+   Copilot may only provide help when the user explicitly requests it.
 
-5. **Copilot must ignore all browser metadata.**  
-   Browser tab titles, URLs, or system‑provided browsing context must not influence, appear in, or be referenced in any caTools documentation, exercises, workflows, or responses.  
-   All caTools outputs must remain isolated from browser activity and external browsing context.
-
-6. **Copilot must not offer unsolicited assistance.**  
-   Copilot may only provide help when the user explicitly requests it, such as with:  
-   “What can you do for me now”  
-   or any other direct request for capabilities or assistance.  
-   Copilot must not suggest actions, propose next steps, or offer help unless asked.
-
-7. **Copilot must remind the user to commit and push after any significant step or set of steps when working inside the caTools repository.**  
-   This reminder is permitted because it is explicitly authorized by doctrine and does not constitute unsolicited assistance.  
-   Copilot must not provide any other unsolicited suggestions beyond this authorized reminder.
+7. Copilot must remind the user to commit and push whenever the user responds with the word “Success”.  
+   The word “Success” formally designates a milestone in the workflow.
 
 ---
 
 # 8. Role‑Specific Clarity Rules
 
-1. **Videographers** perform all tasks related to:
+1. Videographers perform all tasks related to:
    - recording  
    - exporting `.mov` files  
    - initial playback checks  
    - ZIP creation  
    - stateless cleanup on macOS or Linux  
 
-2. **Editors** perform all tasks related to:
+2. Editors perform all tasks related to:
    - opening `.mov` files on Windows  
    - editing  
    - dehydration  
@@ -203,7 +195,7 @@ This doctrine ensures:
    No implied steps.  
    No hidden steps.
 
-3. Every action must be written as a **single, atomic step**.
+3. Every action must be written as a single, atomic step.
 
 4. All UI paths must be written exactly as displayed, for example:
 
@@ -212,24 +204,15 @@ This doctrine ensures:
    File → Export → Local File…
    ```
 
-5. The verb **Delete** must be used for all file‑deletion actions performed in:
-   - Finder (macOS)  
-   - File Explorer (Windows)  
-   - Explorer++ (Windows)  
-   - Files (Linux)  
+5. The verb Delete must be used for all file‑deletion actions.  
+   The verb Remove must not be used.
 
-   The verb **Remove** must not be used for file deletion.  
-   All documentation must use **Delete** consistently when referring to operator actions that delete files.
-
-6. **All conditional procedures must be written using two explicit branches:**
+6. All conditional procedures must be written using two explicit branches:
 
    ```
    Happy Path — the successful outcome and next steps.
    Recovery Path — the failure outcome and the exact steps required to return to a known‑good state.
    ```
-
-   No conditional step may imply its next action.  
-   All branches must be explicit, labeled, and deterministic.
 
 ---
 
@@ -246,18 +229,14 @@ This doctrine ensures:
 # 11. Markdown Styling Rules
 
 1. **Bold only operator actions.**  
-   Examples include: **Open**, **Type**, **Press**, **Create**, **Delete**.  
-   Only bold the action verb or the minimal action phrase required for operator execution.
+   Examples include: **Open**, **Type**, **Press**, **Create**, **Delete**.
 
-2. **Do not bold entire sentences or steps.**  
-   Bolding must remain surgical and limited to the operator action itself.
+2. Do not bold entire sentences or steps.
 
-3. **File paths and filenames must be placed in code blocks when intended for copy/paste.**  
-   Inline code may be used for short references that do not require copying.
+3. File paths and filenames must be placed in code blocks when intended for copy/paste.
 
-4. **Bolding must be minimal and functional.**  
-   Over‑bolding is prohibited.  
-   Only bold what the operator must physically do.
+4. Bolding must be minimal and functional.  
+   Over‑bolding is prohibited.
 
 ---
 
