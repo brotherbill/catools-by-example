@@ -1,5 +1,5 @@
 # Why Standardize Folders
-###### /caTools/LearningCurve/02-folders/1-why-standardize-folders.md
+###### C:/dev/catools-by-example/02-folders/1-why-standardize-folders.md
 
 ## A uniform standard of folders and file names provides these benefits
 1. This *borrows* from **DDD** the concept of **ubiquitous** names.
