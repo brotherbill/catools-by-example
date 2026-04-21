@@ -94,6 +94,11 @@
 ---
 
 ## Expand ZIP file and save assets in folders
+1. Open File Explorer (or Explorer++), navigate to:
+   ```
+   C:\quarantine\
+   ```
+
 1. **Cut**:
    ```
    C:\quarantine\lesson_01_RAW.zip
@@ -107,6 +112,14 @@
    ```
    C:\dev\catools-lc\ACTIVE\RAW\
    ```
+   - Right‑click `lesson_01_RAW.zip`  
+   - Select **Extract All...**  
+   - In the “Files will be extracted to this folder” field, **delete the trailing `\lesson_01_RAW`**  
+   - Ensure the destination is exactly:
+     ```
+     C:\dev\catools-lc\ACTIVE\RAW\
+     ```
+   - **Click** Extract
 
 1. You should now see:
    - `dots.tscshadervid`  
