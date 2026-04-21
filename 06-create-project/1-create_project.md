@@ -1,5 +1,5 @@
 # Create Project
-###### /caTools/LearningCurve/06-create-project/1-create_project.md
+###### C:/dev/catools-by-example/06-create-project/1-create_project.md
 
 ## What is a Project?
 1. A project is all the assets needed to record, edit, and publish a *single* video.
