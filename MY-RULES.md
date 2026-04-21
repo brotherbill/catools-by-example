@@ -148,10 +148,14 @@ This doctrine ensures:
    Optional tools such as Explorer++ may be mentioned only in this form:
 
    ```
-   Open File Explorer (or any Windows file manager such as Explorer++).
+   Open File Explorer (or Explorer++).
    ```
 
 7.4.x When the term “File Explorer” appears in instructional text, expand it once to “File Explorer (or Explorer++)”. Do not expand the phrase again if it already contains “(or Explorer++)”; this prevents recursive expansion. If the Architect explicitly instructs that the expansion should not be applied in a specific instance, follow that instruction.
+
+7.4.y When documentation provides separate instructions for File Explorer and Explorer++ to perform the same action, File Explorer must appear first. Explorer++ instructions must always follow File Explorer instructions and must remain optional. The approved parenthetical form is:
+
+- `Open File Explorer (or Explorer++).`
 
 5. Copilot must ignore all browser metadata.  
    Browser tab titles, URLs, or system‑provided browsing context must not influence, appear in, or be referenced in any caTools documentation.

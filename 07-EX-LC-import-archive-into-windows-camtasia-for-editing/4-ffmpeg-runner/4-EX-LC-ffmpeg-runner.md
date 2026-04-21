@@ -76,52 +76,75 @@ This step occurs **immediately after** the ZIP expansion and **before** importin
         ffmpeg-8.1-essentials_build
         ```
 
-4. **Copy** the following file into the `bin\` directory:
-   ```
-   ffmpeg.exe
-   ```
+4. **Copy** the `ffmpeg.exe` file into the `bin\` directory:
+   - **Open** File Explorer (or Explorer++).
+   - **Navigate** to:
+     ```
+     C:\dev\quarantine\ffmpeg-8.1-essentials_build\bin\
+     ```
+     (This is where the actual `ffmpeg.exe` file is located. It is nested one level down.)
+   - **Locate** the file:
+     ```
+     ffmpeg.exe
+     ```
+   - **Right-click** `ffmpeg.exe`.
+   - **Click** `Copy`.
+   - **Navigate** to the destination folder:
+     ```
+     C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\bin\
+     ```
+   - **Right-click** inside the folder.
+   - **Click** `Paste`.
 
-5. **Verify** that the file exists:
-   ```
-   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\bin\ffmpeg.exe
-   ```
+5. **Create** the validation folder inside the `4-ffmpeg-runner` directory:
 
-6. **Confirm** that the validation folder exists:
-   ```
-   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\validation\
-   ```
+   - **Open** File Explorer (or Explorer++).
+   - **Navigate** to:
+     ```
+     C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\
+     ```
+   - If using File Explorer, **Right-click** in the files pane and **Click** `New` → `Folder`.
+   - If using Explorer++, **Click**:
+     ```
+     Actions → New Folder
+     ```
+   - **Type**:
+     ```
+     validation
+     ```
+   - **Press** Enter.
 
-7. **Confirm** that the validation `.trec` file exists:
+6. **Confirm** that the validation `.trec` file exists:
    ```
    validation-tester.trec
    ```
 
-8. **Run**:
+7. **Run**:
    ```
    ffmpeg-runner.exe
    ```
 
-9. When prompted, **select the folder**:
+8. When prompted, **select the folder**:
    ```
    C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\validation\
    ```
 
-10. Wait for extraction to complete.  
+9. Wait for extraction to complete.  
     - Raw audio and raw video must appear in:
       ```
       C:\dev\catools-lc\ACTIVE\RAW\
       ```
 
-11. **Verify** that the following files exist:
+10. **Verify** that the following files exist:
     - `validation-tester_RAW.wav`  
     - `validation-tester_VIDEO.mp4`
 
-12. **Delete** the validation output files from:
+11. **Delete** the validation output files from:
     ```
     C:\dev\catools-lc\ACTIVE\RAW\
     ```
 
-13. **Close** ffmpeg‑runner.
+12. **Close** ffmpeg‑runner.
 
 ---
 
