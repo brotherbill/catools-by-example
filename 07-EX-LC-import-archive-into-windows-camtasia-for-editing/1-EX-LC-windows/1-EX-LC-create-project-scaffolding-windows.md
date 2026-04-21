@@ -10,34 +10,39 @@ This exercise defines the required folder structure for Windows‑based editing 
 1. **Open** File Explorer (or any Windows file manager such as Explorer++).
 2. **Type**:
    ```
-   C:\
+   C:\dev\
    ```
    into the Address bar, then **Press** Enter.
+
+### Happy Path — `quarantine` folder does not exist
+
 3. **Create** a folder named:
    ```
    quarantine
    ```
 4. Use this folder to store unverified or untrusted content before it is inspected.
 
+### Recovery Path — `quarantine` folder already exists
+
+3. **Open**:
+   ```
+   C:\dev\quarantine
+   ```
+   in File Explorer (or any Windows file manager such as Explorer++).
+4. Inside the `quarantine` folder, **Delete** all files and folders until the folder is empty.
+5. Continue using this folder to store unverified or untrusted content before it is inspected.
+
 ---
 
 ## Parent folder
 
 1. **Open** File Explorer (or any Windows file manager such as Explorer++).
-2. **Type**:
+1. **Type**:
    ```
-   C:\
+   C:\dev\catools-lc
    ```
    into the Address bar, then **Press** Enter.
-3. **Create** a folder named:
-   ```
-   dev
-   ```
-4. Inside the `dev` folder, **Create** a folder named:
-   ```
-   catools-lc
-   ```
-5. Inside the `catools-lc` folder, **Create** the following folders:
+1. Inside the `catools-lc` folder, **Create** the following folders:
    ```
    ACTIVE
    ROLLBACK_VAULT

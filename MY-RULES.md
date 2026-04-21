@@ -1,5 +1,5 @@
-###### /caTools/MY-RULES.md
 # MY RULES – caTools Doctrine (Master File)
+###### C:/dev/catools-by-example/MY-RULES.md
 
 This file defines the **non‑negotiable rules** for all caTools workflows, exercises, and procedures.  
 All platform‑specific exercises (Windows, macOS, Linux) must comply with these rules without exception.
@@ -163,6 +163,10 @@ This doctrine ensures:
    “What can you do for me now”  
    or any other direct request for capabilities or assistance.  
    Copilot must not suggest actions, propose next steps, or offer help unless asked.
+
+7. **Copilot must remind the user to commit and push after any significant step or set of steps when working inside the caTools repository.**  
+   This reminder is permitted because it is explicitly authorized by doctrine and does not constitute unsolicited assistance.  
+   Copilot must not provide any other unsolicited suggestions beyond this authorized reminder.
 
 ---
 
