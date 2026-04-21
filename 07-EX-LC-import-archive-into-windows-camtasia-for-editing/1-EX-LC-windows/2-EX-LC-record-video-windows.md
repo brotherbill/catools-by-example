@@ -1,5 +1,5 @@
 # Exercise – Record Video on Windows (Camtasia Recorder)
-###### /caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/2-EX-LC-record_video-windows.md
+###### C:/dev/caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing\1-EX-LC-windows\2-EX-LC-record-video-windows.md
 
 ## Goals
 1. Prepare the Windows recording machine.  

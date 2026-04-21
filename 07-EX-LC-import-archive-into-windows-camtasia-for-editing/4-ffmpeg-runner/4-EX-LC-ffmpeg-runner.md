@@ -1,5 +1,5 @@
 # 4‑EX‑LC‑ffmpeg‑runner — Extract Raw Audio and Video
-###### /caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/4-EX-LC-ffmpeg-runner.md
+###### C:/dev/caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\4-EX-LC-ffmpeg-runner.md
 
 ### *Operator Exercise — LearningCurve Pipeline*  
 ### *Do not modify. Do not improvise.*
@@ -10,6 +10,66 @@
 Use **ffmpeg‑runner.exe** to extract raw audio and raw video from the `.trec` file after expanding `lesson_XX_RAW.zip`.
 
 This step occurs **immediately after** the ZIP expansion and **before** importing anything into Camtasia Editor.
+
+---
+
+## Install ffmpeg Binary Assets (One-Time Setup)
+
+1. **Create** the folder:
+   ```
+   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\bin\
+   ```
+
+2. **Download** the official Windows ffmpeg ZIP archive from the ffmpeg builds page.
+
+3. **Extract** the ZIP archive to a temporary location.
+
+4. **Copy** the following file into the `bin\` directory:
+   ```
+   ffmpeg.exe
+   ```
+
+5. **Verify** that the file exists:
+   ```
+   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\bin\ffmpeg.exe
+   ```
+
+6. **Confirm** that the validation folder exists:
+   ```
+   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\validation\
+   ```
+
+7. **Confirm** that the validation `.trec` file exists:
+   ```
+   validation-tester.trec
+   ```
+
+8. **Run**:
+   ```
+   ffmpeg-runner.exe
+   ```
+
+9. When prompted, **select the folder**:
+   ```
+   C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\validation\
+   ```
+
+10. Wait for extraction to complete.  
+    - Raw audio and raw video must appear in:
+      ```
+      C:\dev\catools-lc\ACTIVE\RAW\
+      ```
+
+11. **Verify** that the following files exist:
+    - `validation-tester_RAW.wav`  
+    - `validation-tester_VIDEO.mp4`
+
+12. **Delete** the validation output files from:
+    ```
+    C:\dev\catools-lc\ACTIVE\RAW\
+    ```
+
+13. **Close** ffmpeg‑runner.
 
 ---
 

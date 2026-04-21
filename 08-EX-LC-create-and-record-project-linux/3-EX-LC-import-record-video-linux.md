@@ -1,5 +1,5 @@
 # Exercise – Import and Record Video on Linux (OBS Studio)
-###### /caTools/LearningCurve/08-EX-LC-record-video-linux/3-EX-LC-import-record-video-linux.md
+###### C:/dev/caTools-by-example/08-EX-LC-create-and-record-project-linux\3-EX-LC-import-record-video-linux.md
 
 This exercise covers the **Linux‑only** portion of the workflow.  
 Linux is used **only** for recording with OBS Studio and preparing the project ZIP.  

@@ -1,5 +1,5 @@
 # Why Configure the Parent Folder
-###### C:/dev/catools-by-example/02-folders/2-define-parent-folder.md
+###### C:/dev/caTools-by-example/02-folders\2-define-parent-folder.md
 
 ## Why configure the parent folder?
 1. The customer should be able to name the parent folder to fit their naming standards.

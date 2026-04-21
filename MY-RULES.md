@@ -1,5 +1,5 @@
 # MY RULES – caTools Doctrine (Master File)
-###### C:/dev/catools-by-example/MY-RULES.md
+###### C:/dev/caTools-by-example/MY-RULES.md
 
 This file defines the non‑negotiable rules for all caTools workflows, exercises, and procedures.  
 All platform‑specific exercises (Windows, macOS, Linux) must comply with these rules without exception.
