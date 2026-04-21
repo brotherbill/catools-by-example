@@ -129,6 +129,23 @@
 
 ---
 
+## Extract raw audio and video (ffmpeg‑runner)
+1. **Run**:
+   ```
+   ffmpeg-runner.exe
+   ```
+1. When prompted, **select the folder**:
+   ```
+   C:\dev\catools-by-example\
+   ```
+1. Wait for extraction to complete.  
+   - Raw audio and raw video will appear automatically in:
+     ```
+     C:\dev\catools-lc\ACTIVE\RAW\
+     ```
+
+---
+
 ## Import into Windows Camtasia (Editor)
 1. **Open** Windows Camtasia → **STOP**.  
 1. **Click** New Project → **STOP**.
