@@ -216,6 +216,24 @@ This doctrine ensures:
    Recovery Path — the failure outcome and the exact steps required to return to a known‑good state.
    ```
 
+## 9.x ZIP Extraction Validation Rules
+
+1. After extracting any ZIP archive, the operator must perform two mandatory validation checks:
+
+   1. **Confirm** that the extracted folder is a sibling to the ZIP file inside the target directory.  
+      Example:
+      ```
+      ffmpeg-8.1-essentials_build.zip
+      ffmpeg-8.1-essentials_build/
+      ```
+
+   2. **Open** the extracted folder and confirm that it contains files and subfolders directly.  
+      The extracted folder must not contain another nested folder with the same name.  
+      Example of a failure condition:
+      ```
+      ffmpeg-8.1-essentials_build/ffmpeg-8.1-essentials_build/
+      ```
+
 ---
 
 # 10. Zero Drift Rules

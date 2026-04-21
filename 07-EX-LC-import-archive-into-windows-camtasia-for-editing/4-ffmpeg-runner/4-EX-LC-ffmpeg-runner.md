@@ -36,7 +36,45 @@ This step occurs **immediately after** the ZIP expansion and **before** importin
      and confirm that the file **ffmpeg-8.1-essentials_build.zip** is present.
 
 
-3. **Extract** the ZIP archive to a temporary location.
+3. **Extract** the ZIP archive into the quarantine folder:
+   - **Open** File Explorer (or Explorer++).
+   - **Navigate** to:
+     ```
+     C:\dev\quarantine\
+     ```
+   - **Locate** the file:
+     ```
+     ffmpeg-8.1-essentials_build.zip
+     ```
+   - **Right-click** the file `ffmpeg-8.1-essentials_build.zip`.
+   - **Click** `Extract All...`.
+   - In the “Files will be extracted to this folder” field, **ensure** the folder path is:
+     ```
+     C:\dev\quarantine\
+     ```
+   - **Click** `Extract` to begin extraction.
+   - **Validate** the extraction results:
+     1. **Confirm** that the extracted folder:
+        ```
+        ffmpeg-8.1-essentials_build
+        ```
+        is a **sibling** to the ZIP file:
+        ```
+        ffmpeg-8.1-essentials_build.zip
+        ```
+        inside:
+        ```
+        C:\dev\quarantine\
+        ```
+     2. **Open** the folder:
+        ```
+        ffmpeg-8.1-essentials_build
+        ```
+        and **confirm** that it contains files and subfolders directly.  
+        The folder must **not** contain another nested folder named:
+        ```
+        ffmpeg-8.1-essentials_build
+        ```
 
 4. **Copy** the following file into the `bin\` directory:
    ```
