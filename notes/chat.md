@@ -207,3 +207,16 @@ All doctrine remains unchanged and synchronized across platforms.
 
 This completes the rollback and restoration milestone.
 
+## Step 1 — Environment Readiness (Completed 2026‑04‑22)
+
+- Verified PowerShell session open.
+- Confirmed `ffmpeg` not on PATH.
+- Confirmed `ffprobe` not on PATH.
+- Verified `C:\dev\caTools-jr\` did not exist.
+- Created base directory: `C:\dev\caTools-jr\`
+- Created subdirectories:
+  - RAW
+  - OUT
+  - TEMP
+- Verified directory structure matches expected state.
+
