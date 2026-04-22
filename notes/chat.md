@@ -59,3 +59,11 @@ Windows Update Tuesday approaching. Work paused intentionally.
   - Initial Expected Behavior placeholders
   - Notes section
 - This establishes the anchor for all subsequent ffmpeg-runner validation rules.
+
+## 2026-04-22 09:20 EDT — Added Deterministic Metadata Extraction Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 2: Deterministic Metadata Extraction.
+- Defined required ffprobe command structure.
+- Specified required JSON fields (duration, width, height).
+- Added deterministic error-handling behavior for metadata extraction failures.
+- Doctrine now includes two enforceable validation rules.

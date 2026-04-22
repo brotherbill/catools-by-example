@@ -15,6 +15,46 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 4. ffmpeg-runner must produce no side effects outside the output folder.
 5. ffmpeg-runner must exit with code 0 on success.
 
+### 1. File Existence Check
+
+1. ffmpeg-runner must confirm that the input file exists before performing any operation.
+2. If the file does not exist, ffmpeg-runner must:
+   - exit with code 2  
+   - write a deterministic error message to stdout  
+   - perform no additional actions  
+3. The error message must follow this exact format:
+
+   ```
+   ERROR: Input file not found: <filename>
+   ```
+
+4. No output files may be created when this condition occurs.
+
 ## Notes
 - This file will be expanded as behavior is formalized.
 - All behavior must be deterministic and cross-platform consistent.
+
+### 2. Deterministic Metadata Extraction
+
+1. After confirming the input file exists, ffmpeg-runner must extract metadata using a deterministic ffprobe command.
+2. The command must follow this exact structure:
+
+   ```
+   ffprobe -v error -show_entries format=duration:stream=width,height -of json <filename>
+   ```
+
+3. The output must be valid JSON and must include:
+   - `duration`
+   - `width`
+   - `height`
+4. ffmpeg-runner must parse the JSON and store the values internally.
+5. If metadata extraction fails, ffmpeg-runner must:
+   - exit with code 3  
+   - write a deterministic error message to stdout  
+   - perform no additional actions  
+6. The error message must follow this exact format:
+
+   ```
+   ERROR: Unable to extract metadata: <filename>
+   ```
+
