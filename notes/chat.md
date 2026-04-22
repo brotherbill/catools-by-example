@@ -184,3 +184,15 @@ The following elements are now formally established:
 
 This completes the architecture definition phase and prepares the project for implementation.
 
+### 2026‑04‑22 16:06 EDT — Architecture Expansion and Doctrine Sync
+
+The caTools‑jr backend architecture was expanded to include:
+
+- Design by Contract (DbC)
+- Railway Oriented Programming (ROP)
+- Vertical Architecture
+
+The full architecture document was regenerated with these additions.  
+All changes remain isolated to the architecture layer; MY_RULES.md remains unchanged.
+
+This completes the architecture brain‑dump milestone and transitions the project into the Playing Computer phase.
