@@ -234,3 +234,9 @@ This completes the rollback and restoration milestone.
 - Probed `video-white-1s.mp4` using `probe_video.py`; metadata returned successfully.
 - Confirmed ffmpeg-runner toolchain correctly reads and reports validation asset properties.
 
+#### Step 4 — Pre‑Flight Validation Logic (Completed 2026‑04‑22)
+
+- Verified `file_exists.py` correctly detects present files (`EXISTS` path).
+- Verified `file_exists.py` correctly detects missing files (`NOT_FOUND` path).
+- Confirmed both Happy Path and Failure Path behaviors operate deterministically.
+
