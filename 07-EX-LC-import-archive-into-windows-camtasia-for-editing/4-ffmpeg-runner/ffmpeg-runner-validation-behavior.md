@@ -74,3 +74,21 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 
 5. If the duration is valid, ffmpeg-runner must continue to the next validation step.
 
+### 4. Deterministic Resolution Validation
+
+1. ffmpeg-runner must validate that the input file resolution matches the expected dimensions for the validation asset.
+2. For both `video-black-1s.mp4` and `video-white-1s.mp4`, the required resolution is:
+   - width: 1920  
+   - height: 1080
+3. If the resolution does not match exactly, ffmpeg-runner must:
+   - exit with code 5  
+   - write a deterministic error message to stdout  
+   - perform no additional actions  
+4. The error message must follow this exact format:
+
+   ```
+   ERROR: Invalid resolution: <filename> (expected 1920x1080)
+   ```
+
+5. If the resolution is valid, ffmpeg-runner must continue to the next validation step.
+

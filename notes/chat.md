@@ -74,3 +74,10 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Defined strict 1.00s duration requirement with ±0.01s tolerance.
 - Added deterministic error-handling behavior for duration mismatches.
 - Doctrine now includes three enforceable validation rules.
+
+## 2026-04-22 09:31 EDT — Added Deterministic Resolution Validation Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 4: Deterministic Resolution Validation.
+- Defined strict 1920x1080 requirement for both validation assets.
+- Added deterministic error-handling behavior for resolution mismatches.
+- Doctrine now includes four enforceable validation rules.
