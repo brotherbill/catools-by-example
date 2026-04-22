@@ -220,3 +220,11 @@ This completes the rollback and restoration milestone.
   - TEMP
 - Verified directory structure matches expected state.
 
+#### Step 2 — Tool Invocation Discipline (Completed 2026‑04‑22)
+
+- Verified presence of ffmpeg-runner module directory.
+- Confirmed `bin/` contains `ffmpeg.exe` and `ffprobe.exe`.
+- Executed `ffmpeg.exe -version` using full path; tool responded successfully.
+- Executed `ffprobe.exe -version` using full path; tool responded successfully.
+- Verified validation_source directory contains expected test assets.
+
