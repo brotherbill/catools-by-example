@@ -267,4 +267,43 @@ This completes the rollback and restoration milestone.
 - No drift, no pollution, no unexpected files.
 - Step 5 is complete. System is stable and ready for ffmpeg integration.
 
+## 2026-04-22 18:48 EDT — Step 6.x Execution and Validation
 
+### 6.1 — ffmpeg_runner.py Creation
+- Created `ffmpeg_runner.py` with required shebang and combined path+filename header.
+- Placed file in:
+  ```
+  C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/
+  ```
+- Confirmed file contains full Step 6.1 implementation:
+  - ffprobe integration
+  - ffmpeg test pattern generation
+  - metadata.json writer
+  - deterministic output directory creation
+
+### 6.2 — Runner Execution and Output Validation
+- Executed:
+  ```
+  python ffmpeg_runner.py validation_source/video-black-1s.mp4
+  ```
+- Runner completed successfully and created:
+  ```
+  video-black-1s_out/
+  ```
+- Validated output directory exists.
+- Validated required files exist:
+  ```
+  ffmpeg_test_black.mp4
+  ffmpeg_test_white.mp4
+  metadata.json
+  ```
+- Validated metadata.json fields:
+  - correct input_file
+  - correct output_directory
+  - valid timestamp
+  - ffmpeg_test_black = "success"
+  - ffmpeg_test_white = "success"
+  - probe data present
+
+### Status
+Step 6.x completed through 6.2. Ready for 6.3.
