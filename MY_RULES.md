@@ -296,4 +296,53 @@ This doctrine ensures:
 
 ---
 
+# 12. Python Tool Header Rules
+
+1. All Python scripts in the caTools toolchain must begin with a two‑line header:
+
+   ```
+   # <filename>
+   # <absolute path at creation time>
+   ```
+
+   Example:
+
+   ```
+   # ffmpeg_runner.py
+   # C:/dev/.../4-ffmpeg-runner/
+   ```
+
+2. This header is mandatory for:
+   - ffmpeg_runner.py  
+   - probe_video.py  
+   - file_exists.py  
+   - all future Python utilities  
+
+3. Purpose of this rule:
+   - ensures artifact identity  
+   - prevents operator ambiguity  
+   - supports deterministic debugging  
+   - eliminates confusion across machines, repos, or sessions  
+
+4. No additional commentary is allowed in the header.  
+   Only filename and path.
+ 
+ ---
+
+### Rule X — Python Tool Header Requirement
+
+All Python scripts in the toolchain must begin with a two-line header:
+
+1. The filename  
+2. The absolute path to the file at creation time  
+
+Example:
+
+```
+# ffmpeg_runner.py
+# C:/dev/.../4-ffmpeg-runner/
+```
+
+This ensures artifact identity, prevents operator ambiguity, and maintains deterministic debugging across machines and environments.
+
 # End of MY-RULES.md

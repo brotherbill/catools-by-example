@@ -240,3 +240,13 @@ This completes the rollback and restoration milestone.
 - Verified `file_exists.py` correctly detects missing files (`NOT_FOUND` path).
 - Confirmed both Happy Path and Failure Path behaviors operate deterministically.
 
+## 2026-04-22 — Doctrine Update: Added Python Tool Header Rules
+
+- Updated `MY_RULES.md` to include Section **12. Python Tool Header Rules**.
+- This new section establishes a mandatory two‑line header for all Python scripts:
+  - filename  
+  - absolute path at creation time
+- Ensures artifact identity, deterministic debugging, and cross‑machine clarity.
+- Verified that the duplicate “Rule X” block was not present in the current file.
+- Saved the updated doctrine.
+

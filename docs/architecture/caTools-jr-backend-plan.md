@@ -19,7 +19,7 @@ The backend will:
 
 - **Language:** C#  
 - **Runtime:** .NET (cross‑platform, targeting Linux and Windows)  
-- **Architecture style:** Object‑Oriented + Domain‑Driven Design  
+- **Architecture style:** Object‑Oriented + Domain‑Driven Design + Vertical Architecture  
 - **Database:** SQLite (single‑user, embedded)  
 - **Data access:** Dapper  
 - **External tools:** `ffmpeg`, `ffprobe`  
@@ -65,6 +65,27 @@ The backend will:
    - `FailureCategory`  
    The domain model must remain independent of UI, storage, and infrastructure concerns.
 
+9. **Design by Contract (DbC)**  
+   All engine components must enforce explicit contracts using preconditions, postconditions, and invariants.  
+   - Preconditions validate all inputs before execution.  
+   - Postconditions validate all outputs and state transitions after execution.  
+   - Invariants ensure domain objects remain in a valid state at all times.  
+   DbC enforcement must occur at the domain layer and must be centralized to maintain DRY compliance.
+
+10. **Railway Oriented Programming (ROP)**  
+    All workflows must model success and failure as explicit result types (e.g., `Result<TSuccess, TFailure>`).  
+    - Each step returns a result instead of throwing for expected failures.  
+    - Happy Path is a chain of successful results.  
+    - Recovery Path is a chain of failure results with structured error information.  
+    ROP must be applied consistently to dehydration, probing, environment validation, and persistence operations.
+
+11. **Vertical Architecture**  
+    The codebase must be organized by feature verticals rather than technical layers.  
+    - Each vertical encapsulates domain types, services, repositories, and contracts for a specific feature (e.g., Dehydration, Probing, Jobs).  
+    - Cross‑vertical coupling is minimized.  
+    - Shared infrastructure is limited to clearly defined, stable abstractions.  
+    This structure supports incremental evolution and localized changes.
+
 ---
 
 ## 4. High‑Level Components
@@ -94,10 +115,10 @@ The backend will:
    Performs pre‑flight checks for memory, disk space, permissions, and tool availability.
 
 9. **FailureHandler**  
-   Centralized component for handling all error categories, ensuring DRY compliance.
+   Centralized component for handling all error categories, ensuring DRY compliance and integrating ROP/DbC semantics.
 
 10. **ConsoleFrontEnd**  
-   Entry point for the initial engine.
+    Entry point for the initial engine.
 
 ---
 
@@ -123,6 +144,8 @@ At any failure point:
 3. Optionally delete partial outputs.  
 4. Log details.  
 5. Return non‑zero exit code.
+
+All steps must be implemented using ROP result types and DbC contracts.
 
 ---
 
@@ -329,6 +352,9 @@ The caTools‑jr backend will be a single‑instance, C#/.NET, SQLite‑backed e
 - centralize all failure handling to enforce DRY  
 - avoid speculative features through YAGNI  
 - model the workflow using DDD  
+- enforce correctness through Design by Contract  
+- model success and failure explicitly using Railway Oriented Programming  
+- organize code by feature using Vertical Architecture  
 - provide a menu‑driven console interface for deterministic testing  
 - support randomized and nightly test modes  
 - form the foundation for a future Uno Platform rich client  
