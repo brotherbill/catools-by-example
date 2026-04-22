@@ -132,3 +132,16 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Blueprint establishes module boundaries, state model, deterministic flow, logging architecture, error-handling architecture, and CLI structure.
 - Next: commit and push to lock the state, then proceed to the first implementation module.
 
+## 2026‑04‑22 13:36 EDT — Doctrine Update and Runner Validation
+
+- Added new Procedure Clarity Rule to MY_RULES.md:
+  - All operator instructions must explicitly state shell, working directory, and command.
+  - Redundant, location‑anchored phrasing is mandatory.
+
+- Validated `file_exists.py` behavior:
+  - EXISTS path confirmed for:
+    - video-black-1s.mp4
+    - video-white-1s.mp4
+  - NOT_FOUND path confirmed for nonexistent file.
+
+- Doctrine and runner behavior now aligned with deterministic operator workflow.

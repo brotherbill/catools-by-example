@@ -220,6 +220,14 @@ This doctrine ensures:
    Recovery Path — the failure outcome and the exact steps required to return to a known‑good state.
    ```
 
+7. All operator instructions must explicitly state shell, working directory, and command.  
+   Redundant, location‑anchored phrasing is mandatory. Clarity is not condescension; it is the foundation for deterministic execution. Every operator step must specify:
+   - the shell being used (e.g., PowerShell)
+   - the exact working directory
+   - the exact command to run  
+
+   This eliminates drift, accelerates operator recognition, and ensures reproducibility across sessions.
+
 ## 9.x ZIP Extraction Validation Rules
 
 1. After extracting any ZIP archive, the operator must perform two mandatory validation checks:
@@ -237,6 +245,7 @@ This doctrine ensures:
       ```
       ffmpeg-8.1-essentials_build/ffmpeg-8.1-essentials_build/
       ```
+
 
 ---
 
