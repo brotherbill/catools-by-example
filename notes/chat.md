@@ -19,3 +19,12 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - State successfully rehydrated from previous session using chat.md.
 - Ready to continue documenting the validation source asset for ffmpeg-runner.
 - Next: confirm the current location of the validation asset folder and proceed with Baby Step 4.
+
+## 2026-04-22 08:19 EDT — Validation Asset Generated
+
+- Generated the first ffmpeg-runner validation asset: `video-black-1s.mp4`.
+- Used the app-local ffmpeg binary at:
+  `4-ffmpeg-runner/bin/ffmpeg.exe`
+- Command executed exactly as documented in `video-black-1s.md`.
+- Output verified: deterministic 1-second black video, H.264, yuv420p.
+- Next: create the second validation asset (1-second white video).
