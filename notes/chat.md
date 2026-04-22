@@ -145,3 +145,19 @@ Windows Update Tuesday approaching. Work paused intentionally.
   - NOT_FOUND path confirmed for nonexistent file.
 
 - Doctrine and runner behavior now aligned with deterministic operator workflow.
+
+## 2026‑04‑22 13:41 EDT — file_exists.py Error‑Path Validation
+
+- Validated the no‑argument error path for `file_exists.py`.
+- Confirmed expected output:
+  - `ERROR: expected exactly one argument (path to file)`
+- All three behavior paths (EXISTS, NOT_FOUND, ERROR) are now verified.
+
+- Module behavior is deterministic and ready for integration into the ffmpeg‑runner pipeline.
+
+### 2026‑04‑22 14:45 EDT — ffprobe installation and probe validation
+
+- Installed `ffprobe.exe` into `4-ffmpeg-runner/bin/`.
+- Updated `probe_video.py` to resolve `bin/ffprobe.exe` using script‑relative paths.
+- Validated `video-black-1s.mp4` using the updated probe module.
+- JSON metadata returned successfully with codec, resolution, and duration.
