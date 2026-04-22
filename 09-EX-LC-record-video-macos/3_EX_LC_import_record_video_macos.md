@@ -1,5 +1,5 @@
 # Exercise – Import and Record Video on macOS (Camtasia Recorder Only)
-###### C:/dev/caTools-by-example/09-EX-LC-record-video-macos\3-EX-LC-import-record-video-macos.md
+###### C:/dev/caTools-by-example/09-EX-LC-record-video-macos\3_EX_LC_import_record_video_macos.md
 
 This exercise covers the **macOS‑only** portion of the workflow.  
 macOS is used **only** for recording with Camtasia Recorder and preparing the project ZIP.  

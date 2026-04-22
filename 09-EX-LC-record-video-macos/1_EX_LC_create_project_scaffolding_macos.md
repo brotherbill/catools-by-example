@@ -1,5 +1,5 @@
 ###### /caTools/LearningCurve/09-EX-LC-record-video-macos/1-EX-LC-create-project-scaffolding-macos.md
-###### C:/dev/caTools-by-example/09-EX-LC-record-video-macos\1-EX-LC-create-project-scaffolding-macos.md
+###### C:/dev/caTools-by-example/09-EX-LC-record-video-macos\1_EX_LC_create_project_scaffolding_macos.md
 
 When creating videos, there are many assets (files) that comprise the videos and enhancements.  
 At the top, there is a parent folder that contains the folders and files for a single project.

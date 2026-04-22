@@ -1,5 +1,5 @@
 # Project Naming Wizard
-###### C:/dev/caTools-by-example/05-project-naming-wizard\1-project-naming-wizard.md
+###### C:/dev/caTools-by-example/05-project-naming-wizard\1_project_naming_wizard.md
 
 ## Project naming wizard
 1. Customers may have one or more ways to name projects.

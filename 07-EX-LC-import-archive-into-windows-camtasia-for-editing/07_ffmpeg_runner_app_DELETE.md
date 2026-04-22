@@ -1,5 +1,5 @@
 # ffmpeg-runner App Specification
-###### C:/dev/caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing\07-ffmpeg-runner-app-DELETE.md
+###### C:/dev/caTools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing\07_ffmpeg_runner_app_DELETE.md
 
 This document defines the **ffmpeg-runner** utility used during the LearningCurve phase.  
 The purpose of this utility is to provide a **safe, deterministic, operator‑grade** method for converting Camtasia Recorder `.trec` files into `.mp4` files using the bundled `ffmpeg.exe`.

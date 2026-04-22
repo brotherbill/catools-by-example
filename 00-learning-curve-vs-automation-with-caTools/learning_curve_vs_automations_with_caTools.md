@@ -1,5 +1,5 @@
 # Learning curve vs. automations with caTools
-###### C:/dev/caTools-by-example/00-learning-curve-vs-automation-with-caTools\learning-curve-vs-automations-with-caTools.md
+###### C:/dev/caTools-by-example/00-learning-curve-vs-automation-with-caTools\learning_curve_vs_automations_with_caTools.md
 
 ## Learning curve
 1. In the learning curve, we go slow and learn each any every step.

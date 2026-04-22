@@ -1,5 +1,5 @@
 # Exercise – Record Video on Linux
-###### C:/dev/caTools-by-example/08-EX-LC-create-and-record-project-linux\2-EX-LC-record-video-linux.md
+###### C:/dev/caTools-by-example/08-EX-LC-create-and-record-project-linux\2_EX_LC_record_video_linux.md
 
 This exercise covers the **Linux‑only** portion of the workflow.  
 It ends after uploading the **project ZIP** (containing all project folders and files, including the remuxed `.mp4`) to Dropbox and returning the Linux machine to a **stateless** condition.

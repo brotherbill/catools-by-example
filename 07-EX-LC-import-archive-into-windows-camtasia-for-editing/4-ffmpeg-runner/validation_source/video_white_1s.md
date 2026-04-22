@@ -1,5 +1,5 @@
 # video-white-1s.mp4 — Validation Asset
-###### C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/validation_source/video-white-1s.md
+###### C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/validation_source/video_white_1s.md
 
 ## Purpose
 This asset provides a deterministic 1‑second white video for validating ffmpeg-runner behavior across platforms.

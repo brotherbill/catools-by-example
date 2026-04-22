@@ -1,5 +1,5 @@
 # ffmpeg-runner Validation Behavior
-###### C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/ffmpeg-runner-validation-behavior.md
+###### C:/dev/catools-by-example/07-EX-LC-import-archive-into-windows-camtasia-for-editing/4-ffmpeg-runner/ffmpeg_runner_validation_behavior.md
 
 ## Purpose
 This document defines the expected behavior of ffmpeg-runner when processing known, deterministic validation assets.

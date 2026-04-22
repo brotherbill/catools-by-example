@@ -114,3 +114,21 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - No further changes may be made without version increment and documentation.
 - System is ready to proceed to Stage 10: Implementation Blueprint.
 
+## 2026-04-22 10:2x EDT — Repo-Wide Markdown Name Normalization
+
+- Applied repository-wide normalization for all `.md` filenames:
+  replaced hyphens (`-`) with underscores (`_`) in file names.
+- Updated line 2 in corresponding markdown files so embedded filename references
+  use the same underscore-based names.
+- Validation check completed: zero remaining line-2 references to hyphenated
+  markdown filenames.
+- Current git state reflects rename-style path transitions (paired delete/add
+  entries) and is ready for commit/push when requested.
+
+## 2026-04-22 12:18 EDT — Implementation Blueprint Inserted
+
+- Populated `ffmpeg_runner_implementation_blueprint.md` with the full Stage 10 blueprint.
+- File now contains the complete architecture definition for ffmpeg-runner, aligned with Validation Doctrine v1.0.
+- Blueprint establishes module boundaries, state model, deterministic flow, logging architecture, error-handling architecture, and CLI structure.
+- Next: commit and push to lock the state, then proceed to the first implementation module.
+

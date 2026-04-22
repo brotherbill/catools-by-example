@@ -1,5 +1,5 @@
 # Exercise – Create Project Scaffolding (Linux Version)
-###### C:/dev/caTools-by-example/08-EX-LC-create-and-record-project-linux\1-EX-LC-create-project-scaffolding-linux.md
+###### C:/dev/caTools-by-example/08-EX-LC-create-and-record-project-linux\1_EX_LC_create_project_scaffolding_linux.md
 
 When creating videos, there are many assets (files) that comprise the videos and enhancements.  
 At the top, there is a parent folder that contains the folders and files for a single project.

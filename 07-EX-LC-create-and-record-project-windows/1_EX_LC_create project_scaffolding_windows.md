@@ -1,5 +1,5 @@
 # Exercise – Create Project Scaffolding (Windows Version)
-###### C:/dev/caTools-by-example/07-EX-LC-create-and-record-project-windows\1-EX-LC-create project-scaffolding-windows.md
+###### C:/dev/caTools-by-example/07-EX-LC-create-and-record-project-windows\1_EX_LC_create project_scaffolding_windows.md
 
 When creating videos, there are many assets (files) that comprise the videos and enhancements.  
 At the top, there is a parent folder that contains the folders and files for a single project.
