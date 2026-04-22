@@ -228,3 +228,9 @@ This completes the rollback and restoration milestone.
 - Executed `ffprobe.exe -version` using full path; tool responded successfully.
 - Verified validation_source directory contains expected test assets.
 
+#### Step 3 — Validation Asset Behavior (Completed 2026‑04‑22)
+
+- Probed `video-black-1s.mp4` using `probe_video.py`; metadata returned successfully.
+- Probed `video-white-1s.mp4` using `probe_video.py`; metadata returned successfully.
+- Confirmed ffmpeg-runner toolchain correctly reads and reports validation asset properties.
+
