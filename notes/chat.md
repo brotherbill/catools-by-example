@@ -37,3 +37,15 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Command executed exactly as documented in `video-white-1s.md`.
 - Output verified: deterministic 1-second white video, H.264, yuv420p.
 - Next: define and document the ffmpeg-runner behavior for consuming these two assets.
+
+## 2026-04-22 08:4x EDT — Restored Missing Validation Stub
+
+- Detected asymmetry in validation_source directory: `video-black-1s.md` was missing.
+- Recreated the missing stub with correct H1/H6 header and deterministic content.
+- Validation assets are now symmetric:
+  - `video-black-1s.mp4`
+  - `video-black-1s.md`
+  - `video-white-1s.mp4`
+  - `video-white-1s.md`
+- Repository state restored to zero drift.
+
