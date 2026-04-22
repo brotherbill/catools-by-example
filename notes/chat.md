@@ -28,3 +28,12 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Command executed exactly as documented in `video-black-1s.md`.
 - Output verified: deterministic 1-second black video, H.264, yuv420p.
 - Next: create the second validation asset (1-second white video).
+
+## 2026-04-22 08:3x EDT — Second Validation Asset Generated
+
+- Generated the second ffmpeg-runner validation asset: `video-white-1s.mp4`.
+- Used the app-local ffmpeg binary at:
+  `4-ffmpeg-runner/bin/ffmpeg.exe`
+- Command executed exactly as documented in `video-white-1s.md`.
+- Output verified: deterministic 1-second white video, H.264, yuv420p.
+- Next: define and document the ffmpeg-runner behavior for consuming these two assets.

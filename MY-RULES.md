@@ -248,6 +248,17 @@ This doctrine ensures:
 
 3. All platform‑specific files must remain synchronized.
 
+## 10.x Commit Discipline Rule
+
+1. Any update written to `notes/chat.md` represents a confirmed, state‑changing action in the workflow.
+2. If an update is significant enough to be recorded in `notes/chat.md`, it is significant enough to be committed and pushed to the repository.
+3. Operators must perform a commit and push immediately after updating `notes/chat.md`.
+4. This rule ensures:
+   - no state drift between local work and the repo  
+   - reproducible rehydration across machines  
+   - clean session continuity after reboots or Windows Update cycles  
+   - zero ambiguity about what has or has not been completed
+
 ---
 
 # 11. Markdown Styling Rules
