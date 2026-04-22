@@ -250,3 +250,21 @@ This completes the rollback and restoration milestone.
 - Verified that the duplicate “Rule X” block was not present in the current file.
 - Saved the updated doctrine.
 
+## 2026-04-22 18:07 EDT — Step 5 Complete: Runner, Probe, and Metadata Pipeline Online
+
+- Executed `ffmpeg_runner.py` against `video-black-1s.mp4`.
+- Runner created the output directory `video-black-1s_out`.
+- Runner invoked `probe_video.py` successfully.
+- Verified `metadata.json` was created with correct fields:
+  - input_file
+  - output_directory
+  - timestamp
+  - probe (matching direct probe output)
+- Confirmed directory integrity for:
+  - root runner folder
+  - validation_source
+  - bin (ffmpeg.exe, ffprobe.exe)
+- No drift, no pollution, no unexpected files.
+- Step 5 is complete. System is stable and ready for ffmpeg integration.
+
+
