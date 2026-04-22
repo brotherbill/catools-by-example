@@ -58,3 +58,19 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
    ERROR: Unable to extract metadata: <filename>
    ```
 
+### 3. Deterministic Duration Validation
+
+1. After extracting metadata, ffmpeg-runner must validate that the duration of the input file is exactly 1.00 seconds.
+2. Duration must be compared using a tolerance of ±0.01 seconds to account for encoder rounding.
+3. If the duration is outside the allowed tolerance, ffmpeg-runner must:
+   - exit with code 4  
+   - write a deterministic error message to stdout  
+   - perform no additional actions  
+4. The error message must follow this exact format:
+
+   ```
+   ERROR: Invalid duration: <filename> (expected 1.00s)
+   ```
+
+5. If the duration is valid, ffmpeg-runner must continue to the next validation step.
+

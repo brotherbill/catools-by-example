@@ -67,3 +67,10 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Specified required JSON fields (duration, width, height).
 - Added deterministic error-handling behavior for metadata extraction failures.
 - Doctrine now includes two enforceable validation rules.
+
+## 2026-04-22 09:25 EDT — Added Deterministic Duration Validation Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 3: Deterministic Duration Validation.
+- Defined strict 1.00s duration requirement with ±0.01s tolerance.
+- Added deterministic error-handling behavior for duration mismatches.
+- Doctrine now includes three enforceable validation rules.
