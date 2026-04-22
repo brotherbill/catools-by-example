@@ -49,3 +49,13 @@ Windows Update Tuesday approaching. Work paused intentionally.
   - `video-white-1s.md`
 - Repository state restored to zero drift.
 
+## 2026-04-22 08:53 EDT — Created ffmpeg-runner Behavior Stub
+
+- Added the initial behavior-definition file:
+  `ffmpeg-runner-validation-behavior.md`
+- Document now includes:
+  - Purpose
+  - Validation Inputs
+  - Initial Expected Behavior placeholders
+  - Notes section
+- This establishes the anchor for all subsequent ffmpeg-runner validation rules.
