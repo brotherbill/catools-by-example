@@ -92,3 +92,33 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 
 5. If the resolution is valid, ffmpeg-runner must continue to the next validation step.
 
+### 5. Deterministic Color Validation
+
+1. ffmpeg-runner must validate that the dominant color of the input file matches the expected color for the validation asset.
+2. For `video-black-1s.mp4`, the expected RGB value is:
+   - R: 0  
+   - G: 0  
+   - B: 0
+3. For `video-white-1s.mp4`, the expected RGB value is:
+   - R: 255  
+   - G: 255  
+   - B: 255
+4. ffmpeg-runner must extract a single representative pixel using this exact ffmpeg command:
+
+   ```
+   ffmpeg -v error -i <filename> -vf "scale=1:1" -f rawvideo -pix_fmt rgb24 -
+   ```
+
+5. The resulting 3-byte output must be compared directly to the expected RGB triplet.
+6. If the color does not match exactly, ffmpeg-runner must:
+   - exit with code 6  
+   - write a deterministic error message to stdout  
+   - perform no additional actions  
+7. The error message must follow this exact format:
+
+   ```
+   ERROR: Invalid color: <filename> (expected <R>,<G>,<B>)
+   ```
+
+8. If the color is valid, ffmpeg-runner must continue to the next validation step.
+
