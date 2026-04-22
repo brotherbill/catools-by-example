@@ -161,3 +161,10 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Updated `probe_video.py` to resolve `bin/ffprobe.exe` using script‑relative paths.
 - Validated `video-black-1s.mp4` using the updated probe module.
 - JSON metadata returned successfully with codec, resolution, and duration.
+
+### 2026‑04‑22 14:57 EDT — white‑frame probe validation
+
+- Validated `video-white-1s.mp4` using the updated probe module.
+- JSON metadata returned successfully with codec, resolution, and duration.
+- ffmpeg‑runner now fully validated with both black‑frame and white‑frame assets.
+
