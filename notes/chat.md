@@ -81,3 +81,36 @@ Windows Update Tuesday approaching. Work paused intentionally.
 - Defined strict 1920x1080 requirement for both validation assets.
 - Added deterministic error-handling behavior for resolution mismatches.
 - Doctrine now includes four enforceable validation rules.
+
+## 2026-04-22 09:36 EDT — Added Deterministic Color Validation Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 5: Deterministic Color Validation.
+- Defined exact RGB expectations for black and white validation assets.
+- Specified the exact ffmpeg command for extracting a representative pixel.
+- Added deterministic error-handling behavior for color mismatches.
+- Doctrine now includes five enforceable validation rules.
+
+## 2026-04-22 09:40 EDT — Added Deterministic Logging Behavior Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 6: Deterministic Logging Behavior.
+- Defined strict `[OK] <step-name>: <filename>` log format.
+- Established required step order and prohibited timestamps.
+- Ensured logs remain deterministic and stdout-only.
+- Doctrine now includes six enforceable validation rules.
+
+## 2026-04-22 09:45 EDT — Added Deterministic Exit Behavior Rule
+
+- Expanded ffmpeg-runner validation behavior with Rule 7: Deterministic Exit Behavior.
+- Defined the complete exit code map for all validation outcomes.
+- Ensured no additional output or actions occur after exit determination.
+- Locked cross-platform consistency for termination behavior.
+- Doctrine now includes seven enforceable validation rules.
+
+## 2026-04-22 10:13 EDT — Doctrine Frozen (Validation Behavior v1.0)
+
+- Completed Baby Step 9.10.
+- Added the Doctrine Freeze marker to ffmpeg-runner-validation-behavior.md.
+- Validation doctrine is now locked at Version 1.0.
+- No further changes may be made without version increment and documentation.
+- System is ready to proceed to Stage 10: Implementation Blueprint.
+

@@ -259,6 +259,18 @@ This doctrine ensures:
    - clean session continuity after reboots or Windows Update cycles  
    - zero ambiguity about what has or has not been completed
 
+## 10.y chat.md Sequencing Rule
+
+1. `chat.md` is the final record of a completed action. It must never be used as the driver of the workflow.
+2. All work must be performed first — the “meal” — including updates to doctrine, procedures, or assets.
+3. Only after the work is complete may the operator append the corresponding entry to `chat.md`. This is the “dessert”.
+4. `chat.md` must never contain speculative, partial, or in‑progress notes. It records only confirmed, completed actions.
+5. This rule ensures:
+   - clean rehydration  
+   - zero drift between intent and record  
+   - chronological integrity of the workflow  
+   - separation between execution and documentation  
+
 ---
 
 # 11. Markdown Styling Rules

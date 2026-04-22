@@ -158,3 +158,19 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 5. ffmpeg-runner must not produce any output after writing the final error message or final `[OK]` log entry.
 6. Exit behavior must be identical across all platforms.
 
+---
+
+## Doctrine Freeze — Validation Behavior (v1.0)
+
+The validation doctrine is now frozen.  
+No additional rules, edits, or behavioral changes may be introduced without incrementing the doctrine version number and documenting the change in `chat.md`.
+
+This freeze guarantees:
+- deterministic behavior  
+- reproducible validation  
+- stable implementation  
+- predictable E2E testing  
+- zero drift across platforms  
+
+Version: 1.0  
+Status: FROZEN  
