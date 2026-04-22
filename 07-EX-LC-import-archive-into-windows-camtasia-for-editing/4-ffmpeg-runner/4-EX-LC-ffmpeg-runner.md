@@ -114,10 +114,26 @@ This step occurs **immediately after** the ZIP expansion and **before** importin
      ```
    - **Press** Enter.
 
-6. **Confirm** that the validation `.trec` file exists:
-   ```
-   validation-tester.trec
-   ```
+6. **Copy** the validation `.trec` file into the `validation\` folder:
+
+   - **Open** File Explorer (or Explorer++).
+   - **Navigate** to:
+     ```
+     C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\
+     ```
+   - **Locate** the file:
+     ```
+     validation-tester.trec
+     ```
+     (This file is a pre‑generated, known‑good validation asset committed to the repo.)
+   - **Right-click** `validation-tester.trec`.
+   - **Click** `Copy`.
+   - **Navigate** to:
+     ```
+     C:\dev\catools-by-example\07-EX-LC-import-archive-into-windows-camtasia-for-editing\4-ffmpeg-runner\validation\
+     ```
+   - **Right-click** inside the folder.
+   - **Click** `Paste`.
 
 7. **Run**:
    ```
