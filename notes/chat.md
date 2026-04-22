@@ -196,3 +196,14 @@ The full architecture document was regenerated with these additions.
 All changes remain isolated to the architecture layer; MY_RULES.md remains unchanged.
 
 This completes the architecture brain‑dump milestone and transitions the project into the Playing Computer phase.
+
+### 2026‑04‑22 16:19 EDT — MY_RULES.md Rollback and Restoration
+
+MY_RULES.md was found to contain unintended chat.md content.  
+The file was rolled back to the last known‑good version to restore doctrinal integrity.
+
+No rules were added, removed, or modified during this correction.  
+All doctrine remains unchanged and synchronized across platforms.
+
+This completes the rollback and restoration milestone.
+
