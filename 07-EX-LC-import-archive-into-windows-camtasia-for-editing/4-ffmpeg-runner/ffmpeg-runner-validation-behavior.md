@@ -141,3 +141,20 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 5. No timestamps may be included in logs, as they break determinism.
 6. Logs must be written to stdout only — no files may be created.
 
+### 7. Deterministic Exit Behavior
+
+1. ffmpeg-runner must exit with a deterministic exit code based on the final validation outcome.
+2. The following exit codes are reserved and must be used exactly as defined:
+
+   - `0` — all validation steps passed  
+   - `2` — input file not found  
+   - `3` — metadata extraction failed  
+   - `4` — invalid duration  
+   - `5` — invalid resolution  
+   - `6` — invalid color  
+
+3. No other exit codes may be used for validation behavior.
+4. ffmpeg-runner must not perform any additional actions after determining the exit code.
+5. ffmpeg-runner must not produce any output after writing the final error message or final `[OK]` log entry.
+6. Exit behavior must be identical across all platforms.
+
