@@ -122,3 +122,22 @@ This document defines the expected behavior of ffmpeg-runner when processing kno
 
 8. If the color is valid, ffmpeg-runner must continue to the next validation step.
 
+### 6. Deterministic Logging Behavior
+
+1. ffmpeg-runner must produce a deterministic log entry for every major validation step.
+2. Each log entry must follow this exact format:
+
+   ```
+   [OK] <step-name>: <filename>
+   ```
+
+3. The following step-names must be logged in this order:
+   - `file-exists`
+   - `metadata-extracted`
+   - `duration-valid`
+   - `resolution-valid`
+   - `color-valid`
+4. If a step fails, ffmpeg-runner must not log an `[OK]` entry for that step.
+5. No timestamps may be included in logs, as they break determinism.
+6. Logs must be written to stdout only — no files may be created.
+
