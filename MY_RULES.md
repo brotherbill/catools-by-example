@@ -247,6 +247,19 @@ This doctrine ensures:
       ```
 
 
+## 9.z Transactional Purity Rule
+
+A procedure must be **atomic**. It must either:
+- **complete successfully**, producing a fully valid and stable state, or  
+- **fail cleanly**, producing **no state changes**, no partial artifacts, and no side‑effects.
+
+**Validation must occur before any state change.**  
+No operation may create, modify, or emit any file, object, metadata, or external effect **until validation has passed**.
+
+If validation fails, the procedure must exit immediately with **zero writes**, **zero mutations**, and **zero residue**.
+
+Side‑effects (file writes, network calls, database writes, clipboard writes, logging, or external tool invocation) may only occur **after** successful validation and must occur **exactly once**.
+
 ---
 
 # 10. Zero Drift Rules

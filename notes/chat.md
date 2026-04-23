@@ -316,3 +316,11 @@ Confirmed folder naming compliance with MY_RULES.md.
 Added `pure_hexagonal_monolith_decision.md` and `src_folder_structure.md` to `docs/architecture/`.  
 Validated that MY_RULES.md does not require updates based on the pure hexagonal monolith decision.  
 Architecture documentation is now clean, stable, and ready for implementation work.
+
+### 2026‑04‑23 00:43 EDT — Added Transactional Purity Rule to MY_RULES.md
+
+- Inserted new section **9.z Transactional Purity Rule** into MY_RULES.md.
+- Rule enforces atomic procedures: full success or clean failure with zero residue.
+- Placed immediately after ZIP Extraction Validation Rules inside Section 9.
+- Doctrine updated to guarantee deterministic, side‑effect‑safe execution across all workflows.
+
